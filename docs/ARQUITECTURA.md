@@ -1,22 +1,22 @@
-# Arquitectura de Mate de por Medio
+# Arquitectura de El rinconcito de Elías
 
 ## Capas
-- **Presentación:** `index.html` y `styles.css`. La página sigue funcionando como documento estático.
-- **Contenido:** `content.js` publica `window.MATE_CONTENT`: ritual, curiosidades, cuentos, consejos, preguntas abiertas, pequeñas prácticas y postales documentadas con fuentes. Los textos pueden evolucionar sin reescribir los eventos.
-- **Interacción:** `app.js` conecta los botones, muestra diálogos, cambia historias y curiosidades, y gestiona la nota personal.
-- **Persistencia local:** solo se usa `localStorage` para la nota explícita del visitante. No hay cuenta ni sincronización.
-- **Publicación:** GitHub Pages sirve archivos estáticos; no hay servidor propio ni base de datos.
+- **Presentación:** `index.html` estructura la bienvenida, los tres ofrecimientos principales, los recursos descargables, la cajita voluntaria y el cierre.
+- **Sistema visual:** `styles.css` mantiene la paleta crema, salvia y arcilla; tarjetas, espacios generosos, tipografía editorial, adaptación móvil y preferencia de movimiento reducido.
+- **Biblioteca editorial:** `content.js` contiene los cuentos y curiosidades. El contenido se separa del comportamiento para facilitar cambios futuros.
+- **Interacción:** `app.js` rota cuentos, datos y consejitos; construye los párrafos como texto, sin interpretar contenido editorial como HTML.
+- **Recursos:** tres ilustraciones SVG se sirven como archivos reales en `descargas/`, enlazados con el atributo `download`.
+- **Colaboración:** el alias se configura en una única constante de `app.js`. Vacío significa no configurado; no se inventan datos de pago. Con alias confirmado, se habilita copiarlo. El sitio no cobra ni valida transferencias.
+- **Publicación:** GitHub Pages sirve todo como sitio estático. No requiere sesión del autor ni backend.
 
-## Reglas para mantenerlo estable
+## Reglas de mantenimiento
 1. Cargar `content.js` antes de `app.js`.
-2. Mantener los identificadores HTML que consume `app.js`.
-3. Cuando se agregue un nuevo control, contemplar teclado, foco visible y mensajes comprensibles.
-4. No agregar alias de pago hasta que Elías confirme el dato exacto.
-5. No presentar historias ficticias como hechos históricos del Chañar.
-6. Las preguntas y prácticas no recogen respuestas ni crean perfiles de visitantes.
-7. Las postales documentadas deben mantener visible el enlace a la fuente y el contexto editorial.
-6. Las preguntas y prácticas no recogen respuestas ni crean perfiles de visitantes.
-6. Probar vista móvil, vista de escritorio, consola del navegador y guardado/borrado de la nota tras cada cambio grande.
+2. Si se cambian los identificadores de los botones o las zonas de contenido, actualizar ambos archivos de forma coordinada.
+3. Mantener visibles los controles por teclado y respetar `prefers-reduced-motion`.
+4. No inventar ni publicar un alias. Confirmarlo con Elías antes de configurarlo.
+5. No bloquear cuentos, consejos ni descargas por colaborar.
+6. Mantener las historias claramente identificadas como ficción cuando corresponda.
+7. Verificar las rutas de los SVG tras mover o renombrar recursos.
 
-## Alcance de privacidad
-La nota permanece en el navegador y dispositivo donde se guardó. No es un servicio de notas seguro ni sincronizado; no debe usarse para contraseñas, datos financieros ni información sensible.
+## Alcance y privacidad
+No se recogen nombres, correos ni respuestas del visitante. No hay cuentas ni analítica propia. El portapapeles solo se usa si el alias está configurado y la persona pulsa el botón. La transferencia se realiza fuera del sitio, desde la aplicación bancaria o billetera de la persona.
