@@ -6,7 +6,7 @@ Un pequeño mundo ilustrado alrededor del ritual de tomar mate. La experiencia e
 
 - `index.html`: estructura semántica, navegación, escenas y controles.
 - `styles.css`: sistema visual, colores, tipografías, composición adaptable y movimiento suave.
-- `content.js`: biblioteca editorial: 4 momentos del ritual, 12 curiosidades, 9 cuentos breves, 8 consejos para emprender, respuestas para cuatro estados de ánimo y textos de 10 rincones/diálogos.
+- `content.js`: biblioteca editorial: 4 momentos del ritual, 12 curiosidades, 15 cuentos breves, 8 consejos para emprender, 16 preguntas para conversar y 6 pequeñas prácticas opcionales, respuestas para cuatro estados de ánimo y textos de 10 rincones/diálogos.
 - `app.js`: comportamiento de la experiencia, diálogos, navegación por el ritual, cuentos y curiosidades rotativas, consejos, respuestas de ánimo, guardado local y controles accesibles.
 - `docs/ARQUITECTURA.md`: capas técnicas y reglas para mantener el proyecto estable.
 - `docs/PRUEBAS.md`: lista de comprobaciones antes de publicar cambios.
