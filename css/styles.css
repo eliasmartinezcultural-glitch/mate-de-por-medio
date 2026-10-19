@@ -193,3 +193,30 @@ h1{font-size:clamp(50px,5.7vw,76px);line-height:1.02;letter-spacing:-3px}
 }
 @media(hover:none){.content-card:hover{transform:none;box-shadow:0 3px 14px #4a46340a}}
 @media(prefers-reduced-motion:reduce){.content-card,.surprise-button{transition:none}.content-card:hover,.surprise-button:hover{transform:none}}
+\n
+/* EL FOGONCITO · ilustración, paisaje y calidez de encuentro */
+:root{--ember:#b96745;--night:#35483b;--sand:#e8d4b7}
+.fireplace-section{position:relative;overflow:hidden;padding:62px 24px 65px;background:linear-gradient(120deg,#e8e7d9 0%,#f2e5d2 50%,#e9d2b8 100%);border-block:1px solid #d7c5a9}
+.fireplace-section:before,.fireplace-section:after{position:absolute;content:"";pointer-events:none;border:1px solid #9f9d7c45;border-radius:50%}
+.fireplace-section:before{width:410px;height:410px;left:-230px;top:-240px}
+.fireplace-section:after{width:300px;height:300px;right:-180px;bottom:-200px}
+.fireplace-wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center;gap:clamp(25px,5vw,70px);width:min(1080px,100%);margin-inline:auto}
+.fireplace-copy{padding:14px 0 14px 8px}
+.fireplace-copy .eyebrow{margin-bottom:18px}
+.fireplace-copy h2{margin:0 0 18px;font-family:var(--serif);font-size:clamp(43px,5vw,65px);font-weight:400;line-height:.99;letter-spacing:-2.5px}
+.fireplace-copy h2 em{color:#a96649;font-weight:400}
+.fireplace-copy>p:not(.eyebrow){max-width:390px;margin-bottom:21px;color:#62675a;font-size:14px;line-height:1.9}
+.fireplace-details{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 23px}
+.fireplace-details span{padding:7px 10px;border:1px solid #c9c3a9;border-radius:18px;background:#f9f3e6a8;color:#5b6d51;font-size:10px}
+.fireplace-link{display:inline-flex;align-items:center;gap:19px;min-height:44px;padding:10px 15px;border-radius:4px 20px 4px 20px;background:#526a50;color:#fff8eb;text-decoration:none;font-size:12px;transition:transform .2s,background .2s}
+.fireplace-link:hover{transform:translateY(-2px);background:#3c5740}
+.fireplace-link span{color:#e8c19b;font-size:17px}
+.fireplace-art{position:relative;width:100%;max-width:560px;justify-self:center;padding:0 10px}
+.fireplace-art>svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 12px 15px #5d4d3010)}
+.fireplace-note{position:absolute;z-index:2;color:#6d715b;font-family:var(--serif);font-size:12px;font-style:italic;line-height:1.3}
+.note-left{top:21%;left:-4px;transform:rotate(-8deg)}
+.note-right{right:-4px;bottom:22%;transform:rotate(6deg);text-align:right}
+.fireplace-stamp{position:absolute;right:5%;bottom:4%;display:flex;width:76px;height:76px;flex-direction:column;align-items:center;justify-content:center;border:1px solid #a97554;border-radius:50%;background:#f8edd9d9;color:#72775d;font-family:var(--serif);font-size:10px;font-style:italic;line-height:1.3;transform:rotate(8deg)}
+.fireplace-stamp b{color:#a96649;font-size:14px;font-weight:400}
+@media(max-width:760px){.fireplace-section{padding:43px 19px 40px}.fireplace-wrap{grid-template-columns:1fr;gap:18px}.fireplace-copy{padding:0}.fireplace-copy h2{font-size:clamp(42px,10vw,54px)}.fireplace-copy>p:not(.eyebrow){font-size:14px}.fireplace-art{width:min(100%,480px);padding-inline:10px}.note-left{left:0;top:18%;font-size:10px}.note-right{right:0;bottom:20%;font-size:10px}.fireplace-stamp{width:65px;height:65px;right:4%;bottom:4%;font-size:9px}.fireplace-stamp b{font-size:12px}}
+@media(max-width:370px){.fireplace-section{padding-inline:14px}.fireplace-copy h2{font-size:40px}.fireplace-details span{font-size:9px;padding:6px 8px}.fireplace-link{font-size:11px}}
