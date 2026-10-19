@@ -6,6 +6,8 @@
 - [ ] Abrir cada puerta de la mesa y cerrar el diálogo con el botón, el control de cierre y el fondo.
 - [ ] Cambiar varios cuentos y confirmar que título y los tres párrafos se actualizan; recorrer las 15 historias.
 - [ ] Cambiar la curiosidad varias veces.
+- [ ] Confirmar que aparecen las tres postales locales y que cada enlace abre su fuente en otra pestaña.
+- [ ] Revisar que las postales se construyen desde `content.js` y que el texto no se interpreta como HTML.
 - [ ] Avanzar por las preguntas de la ronda y confirmar que las 16 rotan sin recargar.
 - [ ] Cambiar las seis pequeñas prácticas y comprobar que cambian título y descripción.
 - [ ] Confirmar que preguntas y prácticas no solicitan ni guardan respuestas.
