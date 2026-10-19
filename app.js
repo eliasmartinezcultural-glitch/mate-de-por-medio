@@ -1,230 +1,51 @@
 (() => {
   "use strict";
-
-  const $ = (selector, root = document) => root.querySelector(selector);
-  const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+  const $ = (id) => document.getElementById(id);
   const data = window.MATE_CONTENT;
-  if (!data) {
-    console.error("No se pudo cargar la biblioteca editorial de Mate de por Medio.");
-    return;
-  }
+  if (!data) return;
 
-  const { ritualSteps, facts, stories, details, businessIdeas, moodResponses } = data;
-  const dialog = $("#detail-dialog");
-  const toast = $("#toast");
-  let toastTimer;
-  let ritualIndex = 0;
+  const steps = data.ritualSteps || [];
+  const facts = data.facts || [];
+  const tips = [
+    "Antes de cebar, regalate un minuto para acomodar la mesa y estar presente. A veces, preparar el mate también es preparar una pausa.",
+    "El agua no debe hervir: buscá una temperatura que cuide el sabor y que puedas disfrutar sin apuro.",
+    "Si compartís una ronda nueva, preguntá con naturalidad cómo se manejan en esa casa. Cada familia tiene sus costumbres.",
+    "No hace falta que el mate salga perfecto a la primera. Un poco de práctica y una charla amable hacen su parte.",
+    "Si el mate se lava, no pasa nada: cambiá la yerba cuando quieras y seguí disfrutando el momento.",
+    "Dejá un vaso de agua cerca. Acompañar el mate con agua también es una costumbre sencilla de cuidado.",
+    "Si alguien no toma mate, ofrecé otra bebida. Compartir la mesa importa más que tomar lo mismo.",
+    "Cuidá el mate y la bombilla con una limpieza adecuada y dejalos secar bien antes de guardarlos."
+  ];
+
+  let stepIndex = 0;
   let factIndex = 0;
-  let storyIndex = 0;
-  let ideaIndex = 0;
-  let storageAvailable = true;
+  let tipIndex = 0;
 
-  const postcardsGrid = $("#postcards-grid");
-  data.localPostcards.forEach((postcard, index) => {
-    const article = document.createElement("article");
-    article.className = "postcard";
-
-    const mark = document.createElement("span");
-    mark.className = "postcard-mark";
-    mark.setAttribute("aria-hidden", "true");
-    mark.textContent = String(index + 1).padStart(2, "0");
-
-    const title = document.createElement("h3");
-    title.textContent = postcard.title;
-
-    const copy = document.createElement("p");
-    copy.textContent = postcard.text;
-
-    const source = document.createElement("a");
-    source.href = postcard.sourceUrl;
-    source.target = "_blank";
-    source.rel = "noopener noreferrer";
-    source.textContent = postcard.sourceLabel + " ↗";
-
-    const note = document.createElement("small");
-    note.textContent = postcard.note;
-
-    article.append(mark, title, copy, source, note);
-    postcardsGrid.append(article);
-  });
-
-  function showToast(message) {
-    toast.textContent = message;
-    toast.classList.add("show");
-    window.clearTimeout(toastTimer);
-    toastTimer = window.setTimeout(() => toast.classList.remove("show"), 2600);
+  function renderStep() {
+    if (!steps.length) return;
+    const step = steps[stepIndex];
+    $("step-count").innerHTML = String(stepIndex + 1).padStart(2, "0") + " <span>/ " + String(steps.length).padStart(2, "0") + "</span>";
+    $("ritual-step-title").textContent = step.title;
+    $("ritual-step-text").textContent = step.text;
+    $("ritual-back").disabled = stepIndex === 0;
+    $("ritual-next").textContent = stepIndex === steps.length - 1 ? "Volver al comienzo ↺" : "Siguiente →";
   }
-
-  function openDetail(key) {
-    const item = details[key] || details.surprise;
-    $("#dialog-kicker").textContent = item.kicker;
-    $("#dialog-title").textContent = item.title;
-    $("#dialog-content").innerHTML = item.html;
-    if (typeof dialog.showModal === "function") dialog.showModal();
-    else dialog.setAttribute("open", "");
-  }
-
-  function closeDetail() {
-    if (typeof dialog.close === "function") dialog.close();
-    else dialog.removeAttribute("open");
-  }
-
-  $$("[data-open]").forEach(button => {
-    button.addEventListener("click", () => openDetail(button.dataset.open));
+  $("ritual-back").addEventListener("click", () => {
+    stepIndex = Math.max(0, stepIndex - 1);
+    renderStep();
   });
-  $("#dialog-done").addEventListener("click", closeDetail);
-  dialog.addEventListener("click", event => {
-    if (event.target === dialog) closeDetail();
+  $("ritual-next").addEventListener("click", () => {
+    stepIndex = stepIndex === steps.length - 1 ? 0 : stepIndex + 1;
+    renderStep();
   });
-
-  function renderRitual() {
-    const step = ritualSteps[ritualIndex];
-    $("#step-count").textContent = "MOMENTO " + (ritualIndex + 1) + " DE " + ritualSteps.length;
-    $("#ritual-step-title").textContent = step.title;
-    $("#ritual-step-text").textContent = step.text;
-    $$(".step-dots span").forEach((dot, index) => {
-      dot.classList.toggle("active", index === ritualIndex);
-    });
-    $("#ritual-back").disabled = ritualIndex === 0;
-    $("#ritual-next").innerHTML = ritualIndex === ritualSteps.length - 1
-      ? "Volver al comienzo <span aria-hidden='true'>↺</span>"
-      : "Siguiente momento <span aria-hidden='true'>→</span>";
-    $("#ritual-kettle").classList.toggle("kettle-warm", ritualIndex > 0);
-    $("#ritual-steam").classList.toggle("steam-strong", ritualIndex > 0);
-  }
-
-  $("#ritual-back").addEventListener("click", () => {
-    ritualIndex = Math.max(0, ritualIndex - 1);
-    renderRitual();
-  });
-  $("#ritual-next").addEventListener("click", () => {
-    const wasLast = ritualIndex === ritualSteps.length - 1;
-    ritualIndex = wasLast ? 0 : ritualIndex + 1;
-    renderRitual();
-    if (wasLast) showToast("La ronda puede empezar otra vez, cuando quieras.");
-  });
-
-  $("#next-idea").addEventListener("click", () => {
-    ideaIndex = (ideaIndex + 1) % businessIdeas.length;
-    $("#idea-text").textContent = businessIdeas[ideaIndex];
-  });
-
-  $$(".mood-choice").forEach(button => {
-    button.addEventListener("click", () => {
-      $$(".mood-choice").forEach(choice => {
-        choice.setAttribute("aria-pressed", String(choice === button));
-      });
-      $("#mood-response").textContent = moodResponses[button.dataset.mood] || "La ronda está abierta.";
-    });
-  });
-
-  const noteField = $("#private-note");
-  const noteStatus = $("#note-status");
-
-  function readPrivateNote() {
-    try {
-      const saved = window.localStorage.getItem("mate-de-por-medio:nota-v1");
-      if (saved !== null) {
-        noteField.value = saved;
-        noteStatus.textContent = "Encontramos tu nota guardada en este navegador. Solo queda en este dispositivo.";
-      }
-    } catch (error) {
-      storageAvailable = false;
-      noteStatus.textContent = "Este navegador no permite guardar notas. Podés escribirla aquí, pero no quedará guardada al salir.";
-    }
-  }
-
-  $("#save-note").addEventListener("click", () => {
-    if (!storageAvailable) {
-      noteStatus.textContent = "No se pudo guardar en este navegador. Copiá tu nota antes de salir si querés conservarla.";
-      return;
-    }
-    try {
-      window.localStorage.setItem("mate-de-por-medio:nota-v1", noteField.value);
-      noteStatus.textContent = noteField.value.trim()
-        ? "Tu nota quedó guardada en este dispositivo. No se envió a ningún sitio."
-        : "Tu cuaderno quedó en blanco, listo para otra idea.";
-      showToast("Tu nota quedó en tu cuaderno de este dispositivo.");
-    } catch (error) {
-      storageAvailable = false;
-      noteStatus.textContent = "No se pudo guardar. El navegador puede tener el almacenamiento desactivado o lleno.";
-    }
-  });
-
-  $("#clear-note").addEventListener("click", () => {
-    noteField.value = "";
-    try {
-      window.localStorage.removeItem("mate-de-por-medio:nota-v1");
-      noteStatus.textContent = "La nota se borró de este navegador.";
-      showToast("Cuaderno en blanco, listo para otra idea.");
-    } catch (error) {
-      noteStatus.textContent = "La nota se borró del campo, pero el navegador no permitió actualizar el almacenamiento.";
-    }
-  });
-  readPrivateNote();
-
-  $("#next-fact").addEventListener("click", () => {
+  $("next-fact").addEventListener("click", () => {
+    if (!facts.length) return;
     factIndex = (factIndex + 1) % facts.length;
-    $("#fact-text").textContent = facts[factIndex];
+    $("fact-text").textContent = facts[factIndex];
   });
-
-  $("#another-story").addEventListener("click", () => {
-    storyIndex = (storyIndex + 1) % stories.length;
-    const story = stories[storyIndex];
-    const copy = $(".notebook-copy");
-    copy.querySelector(".story-tag").textContent = story.tag;
-    copy.querySelector("h3").textContent = story.title;
-    const paragraphs = copy.querySelectorAll("p:not(.eyebrow):not(.story-tag)");
-    story.paragraphs.forEach((text, index) => {
-      if (paragraphs[index]) paragraphs[index].textContent = text;
-    });
-    showToast("Una historia nueva para acompañar el mate.");
+  $("next-tip").addEventListener("click", () => {
+    tipIndex = (tipIndex + 1) % tips.length;
+    $("tip-text").textContent = tips[tipIndex];
   });
-
-  const choices = {
-    cuento: "Un cuento siempre encuentra lugar en la ronda. El cuaderno ya quedó abierto.",
-    tortas: "Algo rico, un mate calentito y una charla: combinación difícil de mejorar.",
-    amigo: "Entonces corré un poquito la silla. Siempre hay lugar para una visita."
-  };
-  $$(".game-choice").forEach(button => {
-    button.addEventListener("click", () => {
-      $$(".game-choice").forEach(choice => {
-        choice.setAttribute("aria-pressed", String(choice === button));
-      });
-      $("#game-response").textContent = choices[button.dataset.choice];
-    });
-  });
-
-  function surprise() {
-    const options = ["mate", "cuaderno", "ventana", "ronda", "jacinta", "toto", "plaza", "lola", "surprise"];
-    openDetail(options[Math.floor(Math.random() * options.length)]);
-  }
-  $("#surprise-top").addEventListener("click", surprise);
-  $("#donation-open").addEventListener("click", () => openDetail("donation"));
-
-  let questionIndex = 0;
-  let practiceIndex = 0;
-
-  $("#next-question").addEventListener("click", () => {
-    questionIndex = (questionIndex + 1) % data.roundQuestions.length;
-    $("#round-question").textContent = data.roundQuestions[questionIndex];
-  });
-
-  $("#next-practice").addEventListener("click", () => {
-    practiceIndex = (practiceIndex + 1) % data.tinyPractices.length;
-    const practice = data.tinyPractices[practiceIndex];
-    $("#practice-title").textContent = practice.title;
-    $("#practice-text").textContent = practice.text;
-  });
-
-  $("#sound-toggle").addEventListener("click", () => {
-    const paused = document.body.classList.toggle("motion-paused");
-    $("#sound-toggle").setAttribute("aria-pressed", String(paused));
-    $("#sound-toggle").querySelector("span").textContent = paused ? "Movimiento: pausado" : "Movimiento: suave";
-    showToast(paused
-      ? "El mundo se queda quietito un momento."
-      : "El vapor y las hojas vuelven a moverse despacito.");
-  });
-
-  renderRitual();
+  renderStep();
 })();
