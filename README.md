@@ -8,7 +8,7 @@ Un rinconcito personal e independiente, inspirado en San Patricio del Chañar. L
 - `css/styles.css`: sistema visual, composición editorial y reglas responsive.
 - `js/app.js`: menú móvil, frases de pausa y validación ligera de enlaces internos.
 - `js/contenido.js`: espacio separado para organizar futuras piezas editoriales.
-- `assets/casita-chañar.svg`: ilustración original vectorial creada para el sitio.
+- `assets/casita-chanar.svg`: ilustración original vectorial creada para el sitio.
 - `descargas/pinturitas/`: carpeta reservada para hojas imprimibles.
 
 ## Dirección visual
