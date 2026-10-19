@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" rx="30" fill="#e8eadc"/>
+<rect x="34" y="34" width="1132" height="732" rx="24" fill="none" stroke="#9da88d" stroke-width="3" stroke-dasharray="5 13"/>
+<circle cx="600" cy="245" r="103" fill="#f6e7d0"/>
+<g stroke="#7e8d70" stroke-width="7" stroke-linecap="round" fill="none">
+<path d="M542 250 Q600 232 658 250 L648 324 Q641 354 600 357 Q559 354 552 324Z" fill="#b5c3a6"/>
+<ellipse cx="600" cy="250" rx="58" ry="16" fill="#d9c89e"/>
+<path d="M624 239 L641 189"/>
+<path d="M650 274 Q688 269 687 295 Q684 315 652 309"/>
+<path d="M480 230 Q448 190 465 161 Q493 169 502 210 M720 230 Q752 190 735 161 Q707 169 698 210"/>
+</g>
+<text x="600" y="470" text-anchor="middle" fill="#4f5948" font-family="Georgia,serif" font-size="69">Pará un poquito.</text>
+<text x="600" y="548" text-anchor="middle" fill="#4f5948" font-family="Georgia,serif" font-size="53" font-style="italic">También es avanzar.</text>
+<path d="M430 604 Q600 631 770 604" stroke="#b7795c" stroke-width="4" fill="none" stroke-linecap="round"/>
+<text x="600" y="683" text-anchor="middle" fill="#7a7565" font-family="Arial,sans-serif" font-size="23" letter-spacing="4">UN MATECITO SIN APURO</text>
+</svg>
