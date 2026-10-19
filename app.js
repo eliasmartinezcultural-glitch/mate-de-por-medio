@@ -8,6 +8,7 @@
   let ritualIndex = 0;
   let factIndex = 0;
   let storyIndex = 0;
+  let storageAvailable = true;
 
   const ritualSteps = [
     {title:"Primero, calentamos el agua.", text:"La pava empieza a cantar bajito. Mientras tanto, buscamos el mate, la yerba y un lugar cómodo para sentarnos."},
@@ -74,7 +75,60 @@
   $("#ritual-back").addEventListener("click", () => { ritualIndex = Math.max(0, ritualIndex - 1); renderRitual(); });
   $("#ritual-next").addEventListener("click", () => {
     ritualIndex = ritualIndex === ritualSteps.length - 1 ? 0 : ritualIndex + 1;
-    renderRitual();
+  
+  const moodResponses = {
+    calma: "Entonces no hace falta hacer nada más. Respirar, mirar el vapor y quedarse un ratito también es un plan.",
+    idea: "Llevate una pregunta sencilla: ¿qué cosa pequeña podría mejorarle el día a alguien? Las ideas lindas suelen empezar así.",
+    sonrisa: "Toto dice que hasta los días torcidos tienen una esquina graciosa. Pasá por el taller: seguro encontrás algo para sonreír.",
+    curiosidad: "La curiosidad ya abrió la ventana. Buscá una hoja, una nube o una historia del pueblo: siempre hay algo que mirar de nuevo."
+  };
+  $(".mood-choice").forEach(button => button.addEventListener("click", () => {
+    $(".mood-choice").forEach(choice => choice.setAttribute("aria-pressed", String(choice === button)));
+    $("#mood-response").textContent = moodResponses[button.dataset.mood] || "La ronda está abierta.";
+  }));
+  const noteField = $("#private-note");
+  const noteStatus = $("#note-status");
+  function readPrivateNote() {
+    try {
+      const saved = window.localStorage.getItem("mate-de-por-medio:nota-v1");
+      if (saved !== null) {
+        noteField.value = saved;
+        noteStatus.textContent = "Encontramos tu nota guardada en este navegador. Solo queda en este dispositivo.";
+      }
+    } catch (error) {
+      storageAvailable = false;
+      noteStatus.textContent = "Este navegador no permite guardar notas. Podés escribirla aquí, pero no quedará guardada al salir.";
+    }
+  }
+  $("#save-note").addEventListener("click", () => {
+    if (!storageAvailable) {
+      noteStatus.textContent = "No se pudo guardar en este navegador. Copiá tu nota antes de salir si querés conservarla.";
+      return;
+    }
+    try {
+      window.localStorage.setItem("mate-de-por-medio:nota-v1", noteField.value);
+      noteStatus.textContent = noteField.value.trim()
+        ? "Tu nota quedó guardada en este dispositivo. No se envió a ningún sitio."
+        : "Tu cuaderno quedó en blanco, listo para otra idea.";
+      showToast("Tu nota quedó en tu cuaderno de este dispositivo.");
+    } catch (error) {
+      storageAvailable = false;
+      noteStatus.textContent = "No se pudo guardar. El navegador puede tener el almacenamiento desactivado o lleno.";
+    }
+  });
+  $("#clear-note").addEventListener("click", () => {
+    noteField.value = "";
+    try {
+      window.localStorage.removeItem("mate-de-por-medio:nota-v1");
+      noteStatus.textContent = "La nota se borró de este navegador.";
+      showToast("Cuaderno en blanco, listo para otra idea.");
+    } catch (error) {
+      noteStatus.textContent = "La nota se borró del campo, pero el navegador no permitió actualizar el almacenamiento.";
+    }
+  });
+  readPrivateNote();
+
+  renderRitual();
     if (ritualIndex === 0) showToast("La ronda puede empezar otra vez, cuando quieras.");
   });
   $("#next-fact").addEventListener("click", () => { factIndex = (factIndex + 1) % facts.length; $("#fact-text").textContent = facts[factIndex]; });
