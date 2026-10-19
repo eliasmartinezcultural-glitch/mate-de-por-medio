@@ -1,13 +1,16 @@
 # Mate de por Medio
 
-Un pequeño mundo ilustrado alrededor del ritual de tomar mate. La experiencia busca ser apacible, artesanal, accesible y autónoma: una mesa matera como punto de partida, historias, curiosidades y un pueblo ficticio inspirado en la vida cotidiana.
+Un pequeño mundo ilustrado alrededor del ritual de tomar mate. La experiencia es apacible, artesanal y autónoma: una mesa matera, cuentos, curiosidades, un pueblo de ficción, una galería de dibujos originales, consejos sencillos para emprender y un cuaderno personal local.
 
 ## Cómo está organizado
 
 - `index.html`: estructura semántica, navegación, escenas y controles.
 - `styles.css`: sistema visual, colores, tipografías, composición adaptable y movimiento suave.
 - `content.js`: contenido editorial: pasos del ritual, curiosidades, cuentos y fichas de los personajes/rincones.
-- `app.js`: comportamiento de la experiencia, diálogos, elección de actividades, guardado local y controles accesibles.
+- `app.js`: comportamiento de la experiencia, diálogos, elección de actividades, consejos para emprender, guardado local y controles accesibles.
+- `docs/ARQUITECTURA.md`: capas técnicas y reglas para mantener el proyecto estable.
+- `docs/PRUEBAS.md`: lista de comprobaciones antes de publicar cambios.
+- `docs/CONTENIDO-Y-ESTILO.md`: dirección visual y criterios editoriales.
 
 ## Principios del proyecto
 
