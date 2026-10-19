@@ -3,90 +3,100 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eee6d5">
-  <meta name="description" content="Mate de por Medio, un rinconcito amable de Elías para disfrutar el ritual del mate, descubrir curiosidades y compartir pequeños consejos.">
-  <title>Mate de por Medio — Un ratito sin apuro</title>
+  <meta name="theme-color" content="#eee9dd">
+  <meta name="description" content="El rinconcito de Elías: una pausa, un cuentito, curiosidades del mate y pequeños dibujos para llevarte.">
+  <title>El rinconcito de Elías — Mate de por Medio</title>
   <link rel="stylesheet" href="styles.css">
   <script src="content.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
   <header class="site-header" id="inicio">
-    <a class="brand" href="#inicio" aria-label="Mate de por Medio, inicio">
-      <span class="brand-mark" aria-hidden="true">☘</span>
-      <span><strong>Mate de por Medio</strong><small>un ratito sin apuro</small></span>
+    <a class="brand" href="#inicio" aria-label="El rinconcito de Elías, inicio">
+      <span class="brand-mark" aria-hidden="true">❧</span>
+      <span><strong>El rinconcito de Elías</strong><small>MATE DE POR MEDIO · SIN APURO</small></span>
     </a>
-    <nav aria-label="Secciones"><a href="#ritual">El ritual</a><a href="#curiosidades">Curiosidades</a><a href="#consejito">Consejitos</a></nav>
+    <a class="header-note" href="#estante">Pasá, mirá y llevate algo <span aria-hidden="true">↘</span></a>
   </header>
 
   <main>
     <section class="welcome page-width" aria-labelledby="welcome-title">
       <div class="welcome-copy">
-        <p class="eyebrow">Una invitación de Elías</p>
-        <h1 id="welcome-title">Pasá.<br><em>El mate está listo.</em></h1>
-        <p>Prepará el tuyo, acomodate un ratito y dejá que el día afloje. Este pequeño rincón es para disfrutar las cosas sencillas: el agua calentita, una curiosidad, un consejo y la calma de una buena ronda.</p>
-        <a class="button button-dark" href="#ritual">Compartamos el ritual <span aria-hidden="true">↘</span></a>
-        <p class="signature">Con cariño, Elías <span aria-hidden="true">♡</span></p>
+        <p class="eyebrow">Un lugarcito para hacer una pausa</p>
+        <h1 id="welcome-title">Pará la pelota.<br><em>Hacete un mate.</em></h1>
+        <p>Este es mi rinconcito. Lo armé para que puedas bajar un cambio, leer algo lindo, descubrir una curiosidad y llevarte algún dibujo para guardar o imprimir. Entrá cuando quieras; no hace falta que yo esté del otro lado.</p>
+        <a class="button button-dark" href="#estante">Entrar al rinconcito <span aria-hidden="true">↓</span></a>
+        <p class="signature">Un matecito sin apuro. <span>— Elías</span></p>
       </div>
-      <div class="table-scene" role="img" aria-label="Ilustración artesanal de una mesa de madera, un mate humeante, una pava y ramitas">
+      <div class="table-scene" role="img" aria-label="Ilustración rústica de una mesa con un mate, una pava y un cuaderno abierto">
         <div class="sun"></div><div class="branch branch-one">❧</div><div class="branch branch-two">❧</div>
         <div class="shelf"></div><div class="kettle"><span></span></div>
         <div class="mate"><i></i><b></b></div><div class="steam"><i></i><i></i><i></i></div>
-        <div class="little-flower">✿</div><div class="scene-caption">Una mesa sencilla. Un momento propio.</div>
+        <div class="little-flower">✿</div><div class="scene-caption">Un cuaderno abierto, algo calentito y tiempo para vos.</div>
       </div>
     </section>
 
-    <section class="ritual section page-width" id="ritual" aria-labelledby="ritual-title">
+    <section class="shelf-section section page-width" id="estante" aria-labelledby="shelf-title">
       <div class="section-intro">
-        <p class="eyebrow">De a poquito, como en casa</p>
-        <h2 id="ritual-title">El ritual del mate</h2>
-        <p>No hay una sola manera correcta. Cada casa tiene sus mañas; estas son cuatro pequeñas estaciones para acompañarte.</p>
+        <p class="eyebrow">Lo que dejé sobre la mesa</p>
+        <h2 id="shelf-title">Elegí tu ratito</h2>
+        <p>Sin registro, sin vueltas y sin tener que pedir permiso. Abrí algo, curioseá o descargá lo que te guste.</p>
       </div>
-      <article class="ritual-card">
-        <div class="ritual-number" id="step-count">01 <span>/ 04</span></div>
-        <div class="ritual-copy"><h3 id="ritual-step-title">Primero, hacemos un lugar.</h3><p id="ritual-step-text">Corré una silla, apoyá los pies y dejá que el momento encuentre su ritmo.</p></div>
-        <div class="ritual-controls"><button class="button button-light" id="ritual-back" type="button" disabled>← Anterior</button><button class="button button-dark" id="ritual-next" type="button">Siguiente →</button></div>
-      </article>
-      <p class="soft-note">Un detalle importante: el agua no necesita hervir. Y si hoy no tomás mate, igual hay una silla para vos.</p>
-    </section>
-
-    <section class="discovery section page-width" id="curiosidades" aria-labelledby="curiosities-title">
-      <div class="section-intro">
-        <p class="eyebrow">Pequeñas cosas que dan charla</p>
-        <h2 id="curiosities-title">Una curiosidad para cebar la conversación</h2>
+      <div class="shelf-grid">
+        <article class="offer-card story-offer">
+          <div class="offer-art art-book" aria-hidden="true"><span>“</span><i></i><b></b></div>
+          <p class="eyebrow">Para leer despacito</p>
+          <h3>Un cuentito de la ronda</h3>
+          <p id="story-tag" class="mini-label">CUENTITO · FICCIÓN</p>
+          <h4 id="story-title">El mate que esperaba</h4>
+          <div id="story-text" class="story-text"><p>Don Jacinto dejaba un mate junto a la ventana. No esperaba a nadie en particular; le gustaba pensar que todavía podía aparecer una charla.</p></div>
+          <button class="text-button" id="next-story" type="button">Leer otro cuentito <span aria-hidden="true">↗</span></button>
+        </article>
+        <article class="offer-card fact-offer">
+          <div class="offer-art art-leaf" aria-hidden="true"><span>✳</span><i>❧</i></div>
+          <p class="eyebrow">Para aprender algo</p>
+          <h3>Una curiosidad matera</h3>
+          <p id="fact-text">La yerba mate se obtiene de las hojas de Ilex paraguariensis, un árbol nativo de Sudamérica.</p>
+          <button class="text-button" id="next-fact" type="button">Descubrir otra <span aria-hidden="true">↗</span></button>
+        </article>
+        <article class="offer-card download-offer">
+          <div class="offer-art art-pencil" aria-hidden="true"><span>✎</span><i>✿</i></div>
+          <p class="eyebrow">Para guardar o imprimir</p>
+          <h3>Un dibujo para llevar</h3>
+          <p>Preparé tres láminas originales en formato SVG. Podés descargarlas gratis, imprimirlas o usarlas como fondo en tu dispositivo.</p>
+          <div class="download-list">
+            <button class="download-link" type="button" data-download="coloring"><span><b>Dibujo matero para pintar</b><small>Para imprimir · blanco y negro</small></span><span aria-hidden="true">↓</span></button>
+            <button class="download-link" type="button" data-download="postcard"><span><b>Una pausa bonita</b><small>Tarjetita para guardar o compartir</small></span><span aria-hidden="true">↓</span></button>
+            <button class="download-link" type="button" data-download="wallpaper"><span><b>Fondo de pantalla tranquilo</b><small>Para celular o computadora</small></span><span aria-hidden="true">↓</span></button>
+          </div>
+          <p class="download-status" id="download-status" aria-live="polite">Los archivos se generan en tu dispositivo; no hace falta iniciar sesión.</p>
+        </article>
       </div>
-      <article class="note-card curiosity-card">
-        <span class="note-symbol" aria-hidden="true">✳</span>
-        <p id="fact-text">La yerba mate se obtiene de las hojas de Ilex paraguariensis, un árbol nativo de Sudamérica.</p>
-        <button class="text-button" id="next-fact" type="button">Contame otra <span aria-hidden="true">↗</span></button>
-      </article>
     </section>
 
     <section class="tip-section section page-width" id="consejito" aria-labelledby="tip-title">
       <div class="tip-art" aria-hidden="true"><span>☕</span><i>❧</i><b>✿</b></div>
       <article class="tip-copy">
         <p class="eyebrow">Un consejito de la casa</p>
-        <h2 id="tip-title">Las cosas lindas no precisan apuro.</h2>
-        <p id="tip-text">Antes de cebar, regalate un minuto para acomodar la mesa y estar presente. A veces, preparar el mate también es preparar una pausa.</p>
+        <h2 id="tip-title">No hace falta resolver todo hoy.</h2>
+        <p id="tip-text">Mientras se calienta el agua, aflojá los hombros y respir á un poquito. El mundo puede esperar lo que dura un mate.</p>
         <button class="text-button" id="next-tip" type="button">Otro consejito <span aria-hidden="true">→</span></button>
       </article>
     </section>
 
-    <section class="support page-width" aria-labelledby="support-title">
-      <div class="support-flower" aria-hidden="true">♡</div>
-      <div class="support-copy">
-        <p class="eyebrow">Una cajita, sin compromiso</p>
-        <h2 id="support-title">Este rinconcito lo ofrece Elías.</h2>
-        <p>Todo lo que encontrás acá es para disfrutarlo libremente. Si te gusta y algún día querés colaborar para ayudar a sostener este espacio, podés hacerlo de manera voluntaria. No hace falta aportar: tu visita ya es bienvenida.</p>
-        <p class="alias-note" id="alias-note">El alias de colaboración se agregará aquí cuando esté confirmado.</p>
-      </div>
+    <section class="closing page-width" aria-labelledby="closing-title">
+      <span aria-hidden="true">✿</span>
+      <p class="eyebrow">Antes de seguir con el día</p>
+      <h2 id="closing-title">Ojalá te lleves algo lindo.</h2>
+      <p>Una idea, una sonrisa, un dibujo o simplemente cinco minutos de calma. El rinconcito queda acá, listo para cuando vuelvas.</p>
+      <a href="#inicio" class="text-button">Volver a la mesa ↑</a>
     </section>
   </main>
 
   <footer class="site-footer page-width">
-    <a class="footer-brand" href="#inicio">Mate de por Medio <span>✿</span></a>
-    <p>Hecho con cariño por Elías Martínez.</p>
-    <a href="#inicio">Volver al comienzo ↑</a>
+    <a class="footer-brand" href="#inicio">El rinconcito de Elías <span>✿</span></a>
+    <p>Un proyecto independiente de Elías Martínez.</p>
+    <span>Libre para visitar · Sin cuentas ni apuro</span>
   </footer>
 </body>
 </html>
