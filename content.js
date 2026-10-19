@@ -110,6 +110,29 @@ window.MATE_CONTENT = Object.freeze({
     "Mostrá ejemplos reales de lo que hacés. Una foto clara y una explicación honesta pueden ayudar más que una promesa grandilocuente.",
     "Elegí un próximo paso que puedas completar con tus herramientas actuales. No hace falta resolver el proyecto entero hoy."
   ],
+  localPostcards: [
+    {
+      title:"Una fecha reconocida",
+      text:"La Carta Orgánica Municipal reconoce el 21 de mayo de 1973 como fecha de fundación de San Patricio del Chañar.",
+      sourceLabel:"Carta Orgánica Municipal · artículo 2",
+      sourceUrl:"https://infoleg.neuquen.gob.ar/Boletines/bo06092903001a.pdf",
+      note:"Documento normativo oficial."
+    },
+    {
+      title:"El agua y la tierra",
+      text:"La reseña de identidad publicada por el municipio cuenta que, a fines de los años sesenta y comienzos de los setenta, los proyectos de riego y cultivo empezaron a transformar parte del paisaje local.",
+      sourceLabel:"Municipalidad · Nuestra Identidad",
+      sourceUrl:"https://www.sanpatricio.gob.ar/identidad",
+      note:"Es una reseña institucional; una historia más completa necesita sumar otras fuentes y voces locales."
+    },
+    {
+      title:"El nombre del lugar",
+      text:"La reseña municipal relaciona el nombre Chañar con la especie arbórea presente en la zona y vincula San Patricio con la historia de la familia Gasparri.",
+      sourceLabel:"Municipalidad · Nuestra Identidad",
+      sourceUrl:"https://www.sanpatricio.gob.ar/identidad",
+      note:"Se presenta como la explicación publicada por el municipio, no como la única memoria posible."
+    }
+  ],
   roundQuestions: [
     "¿Qué olor te hace sentir que llegaste a casa?",
     "¿Qué costumbre de tu familia te gustaría que no se perdiera?",
