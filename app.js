@@ -104,7 +104,10 @@
   $("#surprise-top").addEventListener("click", surprise);
   $("#donation-open").addEventListener("click", () => openDetail("donation"));
   $("#sound-toggle").addEventListener("click", () => {
-    showToast("El ambiente sonoro todavía no está incorporado. Por ahora, disfrutá el lugar en silencio.");
+    const paused = document.body.classList.toggle("motion-paused");
+    $("#sound-toggle").setAttribute("aria-pressed", String(paused));
+    $("#sound-toggle").querySelector("span").textContent = paused ? "Movimiento: pausado" : "Movimiento: suave";
+    showToast(paused ? "El mundo se queda quietito un momento." : "El vapor y las hojas vuelven a moverse despacito.");
   });
   renderRitual();
 })();
