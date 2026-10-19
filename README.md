@@ -1,39 +1,31 @@
 # Tomar mates con Elías
 
-Un rinconcito personal e independiente, inspirado en San Patricio del Chañar. La intención es que se sienta como una pequeña casa abierta: historias cuidadas, cuentos, dibujos para pintar y detalles cotidianos, todo sin apuro.
+Un rincón personal desde San Patricio del Chañar para leer, mirar, pintar y hacer una pausa. No es una página oficial ni un portal de noticias.
 
-## Archivos
+## Qué contiene
+- Historias breves originales, claramente señaladas como ficción.
+- Miradas personales sobre los detalles cotidianos.
+- Curiosidades presentadas con cuidado: las afirmaciones históricas deben llevar fuente y las identificaciones de plantas deben verificarse.
+- Dibujos originales en SVG para descargar, imprimir y colorear.
+- Búsqueda local y filtros por categoría.
+- Lectura en una ventana accesible, menú adaptable y frases tranquilas.
+- Diseño adaptable a celular, tableta y computadora; sin dependencias externas.
 
-- `index.html`: estructura y contenido de la portada.
-- `css/styles.css`: sistema visual, composición editorial y reglas responsive.
-- `js/app.js`: menú móvil, frases de pausa y validación ligera de enlaces internos.
-- `js/contenido.js`: espacio separado para organizar futuras piezas editoriales.
-- `assets/casita-chanar.svg`: ilustración original vectorial creada para el sitio.
-- `descargas/pinturitas/`: carpeta reservada para hojas imprimibles.
+## Estructura
+- `index.html`: página principal y secciones.
+- `css/styles.css`: diseño visual y adaptación a pantallas.
+- `js/app.js`: búsqueda, filtros, lectura y menú.
+- `js/contenido.js`: contenido editorial local.
+- `assets/pinturitas/`: hojas originales para imprimir.
+- `assets/casita-chanar.svg`: ilustración principal.
 
-## Dirección visual
+## Principios
+Todo el contenido es gratuito. No hay cuentas, comentarios, formularios, rastreo, analítica, reproducción automática, base de datos ni servicios pagos. El sitio no requiere que Elías esté conectado para que funcione.
 
-- Editorial cálida con influencias de cuaderno de campo y revista cultural independiente.
-- Paleta de papel marfil, verde profundo, salvia, terracota y azules suaves.
-- Ilustraciones vectoriales integradas y pequeñas viñetas hechas en SVG/CSS, no imágenes de stock.
-- Tipografía del sistema para no depender de servicios externos.
-- Portada asimétrica, tarjetas ilustradas, cinta editorial, sección de pausa y cierre personal.
-- Adaptación a escritorio, tablet y pantallas angostas; navegación móvil plegable.
-- Accesibilidad básica: HTML semántico, enlace para saltar al contenido, estados de foco visibles, etiquetas accesibles, texto alternativo y respeto por movimiento reducido.
-
-## Límites deliberados
-
-- No hay analítica, rastreo de visitantes, cuentas, comentarios, formularios, base de datos, audio automático ni servicios externos.
-- Las secciones editoriales se muestran como en preparación hasta que tengan contenido real.
-- Las historias históricas se publicarán con fuentes; la ficción se marcará claramente.
-- Todo el contenido será gratuito; una eventual colaboración será voluntaria.
-- No se activa GitHub Pages hasta completar la revisión visual y funcional.
-
-## Lista de revisión antes de publicar
-
-1. Verificar la carga de la ilustración SVG y todos los enlaces internos.
-2. Revisar a mano la presentación a 320, 390, 680, 1024 y escritorio amplio.
-3. Probar el menú con teclado y pantalla táctil, el foco visible y el botón de frases.
-4. Confirmar contraste, lectura y ausencia de desbordes horizontales.
-5. Preparar al menos una primera pieza real en cada sección antes de promocionar el sitio.
-6. Activar GitHub Pages solo después de esa revisión.
+## Antes de publicar
+- Revisar la página en navegador real y en celular.
+- Descargar e imprimir cada SVG para comprobar márgenes y legibilidad.
+- Agregar fuentes a cualquier futura afirmación histórica local.
+- Mantener los cuentos inventados etiquetados como ficción.
+- No publicar teléfonos particulares ni datos de terceros sin autorización.
+- Configurar GitHub Pages solo después de la revisión visual.
