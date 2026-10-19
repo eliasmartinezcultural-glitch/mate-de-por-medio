@@ -25,6 +25,7 @@ El archivo `content.js` reúne el contenido que puede editarse sin cambiar la l�
 - 8 ideas prácticas para pequeños emprendimientos.
 - 16 preguntas abiertas para acompañar conversaciones, sin guardar respuestas.
 - 6 pequeñas prácticas opcionales de observación y encuentro.
+- 3 postales del Chañar con enlaces a fuentes institucionales y notas de contexto.
 - Respuestas amables para cuatro estados de ánimo.
 - Textos extensos para las puertas del mate, cuaderno, ventana, ronda, patio de Jacinta, taller de Toto, placita, rincón de Lola, cajita solidaria y sorpresa.
 
@@ -78,3 +79,9 @@ Las preguntas no se envían ni se guardan. Funcionan como disparadores para pens
 
 ## Biblioteca de relatos
 Los cuentos deben poder leerse por separado, sin orden obligatorio. Cada historia necesita una escena concreta y una voz distinta; evitar que todas repitan la misma moraleja. Los personajes son ficticios y los detalles de sus vidas no deben presentarse como testimonios reales.
+
+
+## Postales documentadas del Chañar
+Las postales muestran el dato junto con su fuente, sin esconder la procedencia. La fecha de fundación se apoya en la Carta Orgánica Municipal; los textos sobre la transformación agrícola y el origen del nombre se atribuyen explícitamente a la reseña de identidad publicada por el municipio. Esa atribución evita convertir una fuente institucional en una historia completa o definitiva.
+
+Para futuras postales, priorizar documentos normativos, archivos públicos, publicaciones de instituciones culturales y entrevistas autorizadas. Distinguir siempre entre dato documentado, interpretación institucional, memoria oral y ficción. Si una fuente presenta una versión discutible o incompleta, explicar el límite en vez de borrar la complejidad.
