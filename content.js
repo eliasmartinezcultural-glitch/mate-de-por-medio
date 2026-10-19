@@ -69,6 +69,36 @@ window.MATE_CONTENT = Object.freeze({
       "Primero iba a descansar las piernas. Después llevó un libro, más tarde una bolsa con mandarinas para compartir. De a poco, otras personas empezaron a saludarla.",
       "El banco siguió siendo el mismo. Lo distinto fue que alguien se había detenido lo suficiente como para descubrir que un lugar común también podía convertirse en encuentro."
     ]}
+    {tag:"CUENTITO DE LA RONDA · FICCIÓN", title:"La radio del vecino", paragraphs:[
+      "En la casa de enfrente, una radio pequeña acompañaba las tareas de la mañana. A veces se escuchaba una canción conocida; otras, una voz que parecía hablar justo de ese día.",
+      "Una tarde la radio dejó de funcionar. Toto abrió la tapa con cuidado, pero antes de tocar nada llamó a quien la conocía de memoria. Entre los dos encontraron un cable flojo y recordaron canciones que hacía años no escuchaban.",
+      "La radio volvió a sonar con un pequeño zumbido. Nadie quiso cambiarla por una nueva: aquel ruido también era parte de la historia de la casa."
+    ]},
+    {tag:"CUENTITO DE LA RONDA · FICCIÓN", title:"El primer brote", paragraphs:[
+      "Jacinta plantó unas semillas en una lata limpia y la dejó cerca de la ventana. Durante varios días no pasó nada que pudiera verse.",
+      "Lola preguntaba cada mañana si ya había crecido algo. Jacinta le propuso mirar sin apurar la tierra. Una semana después apareció un brote tan pequeño que casi parecía una línea verde dibujada con lápiz.",
+      "No celebraron una cosecha enorme. Celebraron ese comienzo, que les recordó que hay cosas que avanzan antes de que podamos notarlas."
+    ]},
+    {tag:"CUENTITO DE LA RONDA · FICCIÓN", title:"El mapa de los saludos", paragraphs:[
+      "Don Jacinto dibujó un mapa del pueblo, pero en vez de calles anotó los lugares donde alguien lo había saludado: la esquina, la ventana de la panadería, el portón azul.",
+      "Lola agregó una estrella donde una persona le había prestado un lápiz. Toto marcó el taller donde habían arreglado juntos una silla. El mapa quedó lleno de nombres que no aparecían en ningún plano.",
+      "Al mirarlo, entendieron que un lugar también se construye con gestos. El dibujo no servía para encontrar una dirección, pero sí para recordar dónde se habían sentido acompañados."
+    ]},
+    {tag:"CUENTITO DE LA RONDA · FICCIÓN", title:"El regalo sin moño", paragraphs:[
+      "Toto quería agradecerle a Jacinta por una ayuda y pasó la mañana pensando qué comprarle. No encontraba nada que le pareciera adecuado.",
+      "Al final reparó una maceta rota, acomodó la tierra y le devolvió la planta que ella creía perdida. No envolvió el regalo: lo dejó en el patio con una nota corta.",
+      "Jacinta sonrió al ver la maceta. No era un objeto nuevo; era algo querido que volvía a tener lugar. A veces, cuidar lo que ya existe es una forma de regalar."
+    ]},
+    {tag:"CUENTITO DE LA RONDA · FICCIÓN", title:"La tarde de las preguntas", paragraphs:[
+      "Una tarde se cortó la conversación. Todos habían contado sus novedades y nadie sabía qué decir después.",
+      "Lola preguntó cuál era el olor que cada uno recordaba de la infancia. Aparecieron respuestas inesperadas: pan tostado, tierra mojada, jabón recién usado y hojas secas al sol.",
+      "La charla volvió a abrirse, no porque alguien tuviera una gran historia, sino porque una pregunta sencilla dejó entrar recuerdos distintos."
+    ]},
+    {tag:"CUENTITO DE LA RONDA · FICCIÓN", title:"El día que llovió adentro", paragraphs:[
+      "Una gotera empezó a caer justo sobre el balde que Toto guardaba para las herramientas. «Por lo menos tiene puntería», dijo, mientras corría la mesa.",
+      "La lluvia siguió un rato y la casa se llenó de sonidos: el agua en el techo, las gotas en el balde y el viento que movía la persiana. Jacinta acercó un trapo y Lola dibujó el mapa de las goteras.",
+      "Cuando pasó el chaparrón, arreglaron lo urgente y dejaron lo demás para el día siguiente. No todo quedó resuelto, pero nadie tuvo que resolverlo a solas."
+    ]},
   ],
   businessIdeas: [
     "Antes de gastar, conversá con alguien que podría necesitar lo que querés ofrecer. Escuchar también es parte de emprender.",
@@ -79,6 +109,32 @@ window.MATE_CONTENT = Object.freeze({
     "Guardá por escrito los acuerdos básicos: qué vas a hacer, para cuándo, cuánto cuesta y qué queda afuera del trabajo.",
     "Mostrá ejemplos reales de lo que hacés. Una foto clara y una explicación honesta pueden ayudar más que una promesa grandilocuente.",
     "Elegí un próximo paso que puedas completar con tus herramientas actuales. No hace falta resolver el proyecto entero hoy."
+  ],
+  roundQuestions: [
+    "¿Qué olor te hace sentir que llegaste a casa?",
+    "¿Qué costumbre de tu familia te gustaría que no se perdiera?",
+    "¿Qué cosa sencilla te alegró esta semana?",
+    "¿Qué lugar de tu barrio recomendarías para caminar sin apuro?",
+    "¿Qué canción te lleva enseguida a otro momento de tu vida?",
+    "¿Quién te enseñó algo útil sin darse demasiada importancia?",
+    "¿Qué comida te recuerda una mesa compartida?",
+    "¿Qué aprendiste a hacer mirando a otra persona?",
+    "¿Qué pequeño arreglo o invento te dio orgullo alguna vez?",
+    "¿Qué paisaje te gustaría volver a mirar?",
+    "¿Qué pregunta te hubiera gustado hacerle a alguien querido?",
+    "¿Qué cosa cotidiana te parece bonita cuando te detenés a mirarla?",
+    "¿Qué palabra o dicho escuchabas mucho en tu casa?",
+    "¿Qué te gustaría aprender sin tener que hacerlo perfecto?",
+    "¿Qué gesto amable recordás de una persona que quizá ni se enteró?",
+    "Si pudieras guardar un sonido de tu lugar, ¿cuál sería?"
+  ],
+  tinyPractices: [
+    {title:"Mirar la luz",text:"Elegí una ventana y observá cómo cae la luz durante un minuto. No hace falta fotografiarla ni explicarla."},
+    {title:"Una cosa por agradecer",text:"Pensá en algo pequeño que alguien hizo y te facilitó el día. Si te nace, decíselo; si no, guardá el recuerdo."},
+    {title:"Ordenar un rincón",text:"Elegí una sola superficie y acomodá tres cosas. Podés parar ahí: no hace falta convertirlo en una gran limpieza."},
+    {title:"Escuchar el lugar",text:"Durante unos segundos, distinguí tres sonidos cercanos. Si hay silencio, también vale."},
+    {title:"Hacer una pregunta",text:"Preguntale a alguien cómo aprendió algo que sabe hacer. Escuchar una experiencia también es aprender."},
+    {title:"Guardar una palabra",text:"Anotá una palabra, un dicho o una expresión que te guste. Si viene de otra persona, preguntá si podés conservarla y compartirla."}
   ],
   moodResponses: {
     calma: "Entonces no hace falta hacer nada más. Respirar, mirar el vapor y quedarse un ratito también es un plan.",
