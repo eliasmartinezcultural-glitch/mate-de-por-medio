@@ -3,100 +3,163 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eee9dd">
-  <meta name="description" content="El rinconcito de Elías: una pausa, un cuentito, curiosidades del mate y pequeños dibujos para llevarte.">
+  <meta name="theme-color" content="#f4eee2">
+  <meta name="description" content="El rinconcito de Elías: un matecito sin apuro, cuentos breves, curiosidades y dibujos gratuitos para descargar.">
   <title>El rinconcito de Elías — Mate de por Medio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="content.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
-  <header class="site-header" id="inicio">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="topbar" id="inicio">
     <a class="brand" href="#inicio" aria-label="El rinconcito de Elías, inicio">
-      <span class="brand-mark" aria-hidden="true">❧</span>
-      <span><strong>El rinconcito de Elías</strong><small>MATE DE POR MEDIO · SIN APURO</small></span>
+      <span class="brand-symbol" aria-hidden="true">✳</span>
+      <span class="brand-words"><strong>El rinconcito de Elías</strong><small>MATE DE POR MEDIO · SIN APURO</small></span>
     </a>
-    <a class="header-note" href="#estante">Pasá, mirá y llevate algo <span aria-hidden="true">↘</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#estante">Las cositas</a>
+      <a href="#descargas">Para llevar</a>
+      <a href="#colaborar">Colaborar</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="welcome page-width" aria-labelledby="welcome-title">
-      <div class="welcome-copy">
-        <p class="eyebrow">Un lugarcito para hacer una pausa</p>
-        <h1 id="welcome-title">Pará la pelota.<br><em>Hacete un mate.</em></h1>
-        <p>Este es mi rinconcito. Lo armé para que puedas bajar un cambio, leer algo lindo, descubrir una curiosidad y llevarte algún dibujo para guardar o imprimir. Entrá cuando quieras; no hace falta que yo esté del otro lado.</p>
-        <a class="button button-dark" href="#estante">Entrar al rinconcito <span aria-hidden="true">↓</span></a>
-        <p class="signature">Un matecito sin apuro. <span>— Elías</span></p>
+  <main id="contenido">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker"><span></span> La puerta está abierta</p>
+        <h1 id="hero-title">Pará la pelota.<br><em>Hacete un mate.</em></h1>
+        <p class="hero-intro">Este es mi rinconcito: un lugar para bajar un cambio, leer algo breve, aprender una curiosidad y llevarte alguna cosita linda. Entrá cuando quieras. No hace falta que yo esté del otro lado.</p>
+        <a class="primary-link" href="#estante">Pasar un ratito <span aria-hidden="true">↓</span></a>
+        <p class="signoff">Que el agua caliente y las apuradas esperen un poquito. <span>— Elías</span></p>
       </div>
-      <div class="table-scene" role="img" aria-label="Ilustración rústica de una mesa con un mate, una pava y un cuaderno abierto">
-        <div class="sun"></div><div class="branch branch-one">❧</div><div class="branch branch-two">❧</div>
-        <div class="shelf"></div><div class="kettle"><span></span></div>
-        <div class="mate"><i></i><b></b></div><div class="steam"><i></i><i></i><i></i></div>
-        <div class="little-flower">✿</div><div class="scene-caption">Un cuaderno abierto, algo calentito y tiempo para vos.</div>
+      <div class="hero-art" aria-label="Ilustración de un mate y una pava sobre una mesa" role="img">
+        <div class="art-sun"></div><div class="art-sprig sprig-a">❧</div><div class="art-sprig sprig-b">❧</div>
+        <div class="art-shelf"></div><div class="art-kettle"><i></i></div>
+        <div class="art-mate"><i></i><b></b></div><div class="art-steam"><i></i><i></i><i></i></div>
+        <div class="art-paper"><span>un ratito</span><small>sin apuro</small></div>
+        <p>Una mesa sencilla, una pausa y tiempo para vos.</p>
       </div>
     </section>
 
-    <section class="shelf-section section page-width" id="estante" aria-labelledby="shelf-title">
-      <div class="section-intro">
-        <p class="eyebrow">Lo que dejé sobre la mesa</p>
+    <section class="welcome-strip wrap" aria-label="Bienvenida">
+      <span class="strip-flower" aria-hidden="true">✿</span>
+      <p><strong>Bienvenido, bienvenida.</strong> Acá no hay que completar nada ni llegar a ningún lado. Elegí una cosita, quedate lo que quieras y seguí tu día cuando estés listo.</p>
+    </section>
+
+    <section class="section wrap" id="estante" aria-labelledby="shelf-title">
+      <div class="section-heading">
+        <p class="kicker">Lo que dejé sobre la mesa</p>
         <h2 id="shelf-title">Elegí tu ratito</h2>
-        <p>Sin registro, sin vueltas y sin tener que pedir permiso. Abrí algo, curioseá o descargá lo que te guste.</p>
+        <p>Unas pocas cosas, hechas para abrirse con calma.</p>
       </div>
-      <div class="shelf-grid">
-        <article class="offer-card story-offer">
-          <div class="offer-art art-book" aria-hidden="true"><span>“</span><i></i><b></b></div>
-          <p class="eyebrow">Para leer despacito</p>
-          <h3>Un cuentito de la ronda</h3>
-          <p id="story-tag" class="mini-label">CUENTITO · FICCIÓN</p>
-          <h4 id="story-title">El mate que esperaba</h4>
-          <div id="story-text" class="story-text"><p>Don Jacinto dejaba un mate junto a la ventana. No esperaba a nadie en particular; le gustaba pensar que todavía podía aparecer una charla.</p></div>
-          <button class="text-button" id="next-story" type="button">Leer otro cuentito <span aria-hidden="true">↗</span></button>
+      <div class="offer-grid">
+        <article class="offer-card story-card">
+          <div class="card-topline"><span class="card-icon" aria-hidden="true">“</span><span class="card-index">01 / LEER</span></div>
+          <p class="mini-kicker">Un cuentito de la ronda</p>
+          <h3 id="story-title">El mate que esperaba</h3>
+          <p class="story-tag" id="story-tag">Ficción breve</p>
+          <div class="story-copy" id="story-text" aria-live="polite"><p>Don Jacinto dejaba un mate junto a la ventana. No esperaba a nadie en particular; le gustaba pensar que todavía podía aparecer una charla.</p></div>
+          <button class="quiet-button" id="next-story" type="button">Leer otro cuentito <span aria-hidden="true">↗</span></button>
         </article>
-        <article class="offer-card fact-offer">
-          <div class="offer-art art-leaf" aria-hidden="true"><span>✳</span><i>❧</i></div>
-          <p class="eyebrow">Para aprender algo</p>
-          <h3>Una curiosidad matera</h3>
-          <p id="fact-text">La yerba mate se obtiene de las hojas de Ilex paraguariensis, un árbol nativo de Sudamérica.</p>
-          <button class="text-button" id="next-fact" type="button">Descubrir otra <span aria-hidden="true">↗</span></button>
+
+        <article class="offer-card fact-card">
+          <div class="card-topline"><span class="card-icon leaf-icon" aria-hidden="true">❧</span><span class="card-index">02 / APRENDER</span></div>
+          <p class="mini-kicker">Una curiosidad matera</p>
+          <h3>Un dato para cebar la charla</h3>
+          <p id="fact-text" class="fact-copy" aria-live="polite">La yerba mate se obtiene de las hojas de Ilex paraguariensis, un árbol nativo de Sudamérica.</p>
+          <button class="quiet-button" id="next-fact" type="button">Descubrir otra <span aria-hidden="true">↗</span></button>
         </article>
-        <article class="offer-card download-offer">
-          <div class="offer-art art-pencil" aria-hidden="true"><span>✎</span><i>✿</i></div>
-          <p class="eyebrow">Para guardar o imprimir</p>
-          <h3>Un dibujo para llevar</h3>
-          <p>Preparé tres láminas originales en formato SVG. Podés descargarlas gratis, imprimirlas o usarlas como fondo en tu dispositivo.</p>
-          <div class="download-list">
-            <button class="download-link" type="button" data-download="coloring"><span><b>Dibujo matero para pintar</b><small>Para imprimir · blanco y negro</small></span><span aria-hidden="true">↓</span></button>
-            <button class="download-link" type="button" data-download="postcard"><span><b>Una pausa bonita</b><small>Tarjetita para guardar o compartir</small></span><span aria-hidden="true">↓</span></button>
-            <button class="download-link" type="button" data-download="wallpaper"><span><b>Fondo de pantalla tranquilo</b><small>Para celular o computadora</small></span><span aria-hidden="true">↓</span></button>
+
+        <article class="offer-card pause-card">
+          <div class="card-topline"><span class="card-icon" aria-hidden="true">☼</span><span class="card-index">03 / RESPIRAR</span></div>
+          <p class="mini-kicker">Un consejito de la casa</p>
+          <h3 id="tip-title">No hace falta resolver todo hoy.</h3>
+          <p id="tip-text" class="tip-copy" aria-live="polite">Mientras se calienta el agua, aflojá los hombros. El mundo puede esperar lo que dura un mate.</p>
+          <button class="quiet-button" id="next-tip" type="button">Otro consejito <span aria-hidden="true">↗</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="downloads-section" id="descargas" aria-labelledby="downloads-title">
+      <div class="wrap downloads-inner">
+        <div class="downloads-heading">
+          <div>
+            <p class="kicker">Pequeños regalos digitales</p>
+            <h2 id="downloads-title">Algo lindo para llevarte</h2>
+            <p>Son gratuitos. Descargalos, guardalos o imprimilos en casa. No necesitás registrarte ni pedir permiso.</p>
           </div>
-          <p class="download-status" id="download-status" aria-live="polite">Los archivos se generan en tu dispositivo; no hace falta iniciar sesión.</p>
-        </article>
+          <span class="download-stamp" aria-hidden="true">hecho<br>con calma<br>✿</span>
+        </div>
+        <div class="download-grid">
+          <article class="download-item">
+            <a class="download-preview preview-coloring" href="descargas/dibujo-matero.svg" download aria-label="Descargar dibujo matero para pintar">
+              <img src="descargas/dibujo-matero.svg" alt="Vista previa de un dibujo lineal de un mate y hojas para colorear">
+              <span class="download-arrow" aria-hidden="true">↓</span>
+            </a>
+            <p class="mini-kicker">Para imprimir</p><h3>Dibujo matero</h3>
+            <p>Un dibujo sencillo para pintar con lápices o fibras.</p>
+            <a class="file-link" href="descargas/dibujo-matero.svg" download>Descargar dibujo <span aria-hidden="true">↓</span></a>
+          </article>
+          <article class="download-item">
+            <a class="download-preview preview-postcard" href="descargas/tarjetita-pausa.svg" download aria-label="Descargar tarjeta Una pausa bonita">
+              <img src="descargas/tarjetita-pausa.svg" alt="Tarjeta ilustrada que dice Pará un poquito, también es avanzar">
+              <span class="download-arrow" aria-hidden="true">↓</span>
+            </a>
+            <p class="mini-kicker">Para guardar o compartir</p><h3>Una pausa bonita</h3>
+            <p>Una tarjetita con un recordatorio amable para un día largo.</p>
+            <a class="file-link" href="descargas/tarjetita-pausa.svg" download>Descargar tarjeta <span aria-hidden="true">↓</span></a>
+          </article>
+          <article class="download-item">
+            <a class="download-preview preview-wallpaper" href="descargas/fondo-matero.svg" download aria-label="Descargar fondo de pantalla matero">
+              <img src="descargas/fondo-matero.svg" alt="Fondo de pantalla cálido con ilustraciones pequeñas de mates y hojas">
+              <span class="download-arrow" aria-hidden="true">↓</span>
+            </a>
+            <p class="mini-kicker">Para tu dispositivo</p><h3>Fondo matero</h3>
+            <p>Un fondo tranquilo para el celular o la computadora.</p>
+            <a class="file-link" href="descargas/fondo-matero.svg" download>Descargar fondo <span aria-hidden="true">↓</span></a>
+          </article>
+        </div>
+        <p class="download-footnote"><span aria-hidden="true">✳</span> Los dibujos son archivos SVG: se ven nítidos al imprimir y se pueden abrir en el navegador.</p>
       </div>
     </section>
 
-    <section class="tip-section section page-width" id="consejito" aria-labelledby="tip-title">
-      <div class="tip-art" aria-hidden="true"><span>☕</span><i>❧</i><b>✿</b></div>
-      <article class="tip-copy">
-        <p class="eyebrow">Un consejito de la casa</p>
-        <h2 id="tip-title">No hace falta resolver todo hoy.</h2>
-        <p id="tip-text">Mientras se calienta el agua, aflojá los hombros y respir á un poquito. El mundo puede esperar lo que dura un mate.</p>
-        <button class="text-button" id="next-tip" type="button">Otro consejito <span aria-hidden="true">→</span></button>
-      </article>
+    <section class="support-section wrap" id="colaborar" aria-labelledby="support-title">
+      <div class="support-note">
+        <span class="support-flower" aria-hidden="true">♡</span>
+        <div class="support-copy">
+          <p class="kicker">Una cajita al costado</p>
+          <h2 id="support-title">Si te nace, podés colaborar.</h2>
+          <p>Este rinconcito es libre y seguirá siendo libre. Si algo de lo que encontraste acá te hizo bien y querés ayudar a que siga creciendo, podés dejar una colaboración voluntaria. No hace falta, no hay monto esperado y no cambia lo que podés disfrutar.</p>
+          <div class="support-status" id="support-status" aria-live="polite">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span id="support-status-text">La cajita está preparada; falta cargar el alias confirmado para recibir aportes.</span>
+          </div>
+          <div class="support-action" id="support-action">
+            <span class="alias-label">Alias para colaborar</span>
+            <div class="alias-row"><code id="support-alias">Todavía no configurado</code><button class="copy-button" id="copy-alias" type="button" disabled>Copiar alias</button></div>
+            <p class="support-small">No publicamos datos de pago inventados. Cuando el alias esté confirmado, esta cajita permitirá copiarlo con un toque.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="closing page-width" aria-labelledby="closing-title">
+    <section class="closing wrap" aria-labelledby="closing-title">
       <span aria-hidden="true">✿</span>
-      <p class="eyebrow">Antes de seguir con el día</p>
+      <p class="kicker">Bueno, por hoy</p>
       <h2 id="closing-title">Ojalá te lleves algo lindo.</h2>
-      <p>Una idea, una sonrisa, un dibujo o simplemente cinco minutos de calma. El rinconcito queda acá, listo para cuando vuelvas.</p>
-      <a href="#inicio" class="text-button">Volver a la mesa ↑</a>
+      <p>Una idea, una sonrisa, un dibujo o simplemente cinco minutos tuyos. La puerta queda abierta para cuando quieras volver.</p>
+      <a href="#inicio" class="back-top">Volver a la mesa ↑</a>
     </section>
   </main>
 
-  <footer class="site-footer page-width">
+  <footer class="footer wrap">
     <a class="footer-brand" href="#inicio">El rinconcito de Elías <span>✿</span></a>
-    <p>Un proyecto independiente de Elías Martínez.</p>
-    <span>Libre para visitar · Sin cuentas ni apuro</span>
+    <p>Un pequeño proyecto independiente de Elías Martínez.</p>
+    <span>Acceso libre · Sin cuentas · Sin apuro</span>
   </footer>
 </body>
 </html>
