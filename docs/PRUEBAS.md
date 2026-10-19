@@ -4,8 +4,11 @@
 - [ ] Abrir el sitio y confirmar que se ve la casita ilustrada.
 - [ ] Avanzar y retroceder por los cuatro momentos del ritual; al terminar, volver al comienzo.
 - [ ] Abrir cada puerta de la mesa y cerrar el diálogo con el botón, el control de cierre y el fondo.
-- [ ] Cambiar al menos cinco cuentos distintos y confirmar que título y tres párrafos se actualizan.
+- [ ] Cambiar varios cuentos y confirmar que título y los tres párrafos se actualizan; recorrer las 15 historias.
 - [ ] Cambiar la curiosidad varias veces.
+- [ ] Avanzar por las preguntas de la ronda y confirmar que las 16 rotan sin recargar.
+- [ ] Cambiar las seis pequeñas prácticas y comprobar que cambian título y descripción.
+- [ ] Confirmar que preguntas y prácticas no solicitan ni guardan respuestas.
 - [ ] Visitar los cuatro lugares del pueblo ilustrado.
 - [ ] Probar las tres opciones de la ronda.
 - [ ] Cambiar todos los consejos para emprender.
