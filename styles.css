@@ -45,3 +45,19 @@ body.motion-paused .tree-sway,body.motion-paused .steam,body.motion-paused .ritu
 .idea-footer>span{font-size:22px;color:#8a9a7d}.idea-footer .text-button{text-align:left;font-size:11px}
 @media(max-width:850px){.workshop-layout{grid-template-columns:1fr}.idea-card{min-height:0}.idea-card>p{min-height:0}.sketch-art{height:150px}}
 @media(max-width:600px){.workshop-section{padding-top:0;padding-bottom:55px}.sketch-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.sketch-card:last-child{grid-column:1/-1}.sketch-card:last-child .sketch-art{height:130px}.sketch-art{height:125px}.sketch-caption{font-size:9px;padding-top:9px}.idea-card{padding:22px 18px}.idea-card h3{font-size:24px}}
+
+
+/* Preguntas abiertas y prácticas pequeñas: una invitación, nunca una tarea */
+.round-prompts{padding-top:8px;padding-bottom:70px}
+.prompt-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;max-width:1000px;margin:0 auto}
+.prompt-card{position:relative;min-width:0;overflow:hidden;border:1px solid #e1d7c5;border-radius:22px;padding:29px 30px;background:#fff9ef;box-shadow:0 9px 28px rgba(92,77,54,.04)}
+.question-card{background:#f0eadc}.practice-card{background:#e8ecdf;border-color:#d8dfce}
+.prompt-number{display:block;font-size:9px;letter-spacing:.15em;font-weight:700;color:#887b65}
+.prompt-ornament{position:absolute;right:24px;top:19px;font-size:28px;color:#9ba98a;opacity:.8}
+.prompt-main{max-width:420px;min-height:94px;margin:22px 0 17px;font:500 clamp(22px,2.5vw,31px)/1.35 var(--serif);letter-spacing:-.025em;color:#514b3d}
+.prompt-card h3{margin:20px 0 10px;font:500 25px/1.2 var(--serif);color:#514b3d}
+.prompt-card>p:not(.prompt-main){font:14px/1.85 var(--serif);color:#707664;min-height:75px;margin:0 0 18px}
+.prompt-card .text-button{font-size:11px;text-align:left}
+.prompt-footnote{margin:18px auto 0;max-width:700px;text-align:center;font-size:10px;line-height:1.8;color:#8b8271}
+@media(max-width:700px){.round-prompts{padding-top:0;padding-bottom:54px}.prompt-grid{grid-template-columns:1fr;gap:11px}.prompt-card{padding:24px 21px;border-radius:18px}.prompt-main{font-size:25px;min-height:0;margin-top:19px}.prompt-card>p:not(.prompt-main){min-height:0}.prompt-ornament{right:18px;top:15px}}
+@media(prefers-reduced-motion:reduce){.prompt-card{transition:none!important}}
