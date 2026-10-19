@@ -19,6 +19,35 @@
   let ideaIndex = 0;
   let storageAvailable = true;
 
+  const postcardsGrid = $("#postcards-grid");
+  data.localPostcards.forEach((postcard, index) => {
+    const article = document.createElement("article");
+    article.className = "postcard";
+
+    const mark = document.createElement("span");
+    mark.className = "postcard-mark";
+    mark.setAttribute("aria-hidden", "true");
+    mark.textContent = String(index + 1).padStart(2, "0");
+
+    const title = document.createElement("h3");
+    title.textContent = postcard.title;
+
+    const copy = document.createElement("p");
+    copy.textContent = postcard.text;
+
+    const source = document.createElement("a");
+    source.href = postcard.sourceUrl;
+    source.target = "_blank";
+    source.rel = "noopener noreferrer";
+    source.textContent = postcard.sourceLabel + " ↗";
+
+    const note = document.createElement("small");
+    note.textContent = postcard.note;
+
+    article.append(mark, title, copy, source, note);
+    postcardsGrid.append(article);
+  });
+
   function showToast(message) {
     toast.textContent = message;
     toast.classList.add("show");
