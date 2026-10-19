@@ -8,6 +8,7 @@
   let ritualIndex = 0;
   let factIndex = 0;
   let storyIndex = 0;
+  let ideaIndex = 0;
   let storageAvailable = true;
   const { ritualSteps, facts, stories, details } = window.MATE_CONTENT;
 
@@ -47,6 +48,16 @@
   $("#ritual-next").addEventListener("click", () => {
     ritualIndex = ritualIndex === ritualSteps.length - 1 ? 0 : ritualIndex + 1;
   
+  const businessIdeas = [
+    "Antes de gastar, conversá con una persona que podría necesitar lo que querés ofrecer. Escuchar también es parte de emprender.",
+    "Empezá con una prueba pequeña: una muestra, un pedido o una primera versión. Aprender temprano puede ahorrarte tiempo y dinero.",
+    "Anotá qué te cuesta hacer el trabajo y cuánto tiempo te lleva. Un precio sostenible también debe cuidar tu esfuerzo.",
+    "No necesitás resolver todo hoy. Elegí el próximo paso que sí podés dar con las herramientas que ya tenés."
+  ];
+  $("#next-idea").addEventListener("click", () => {
+    ideaIndex = (ideaIndex + 1) % businessIdeas.length;
+    $("#idea-text").textContent = businessIdeas[ideaIndex];
+  });
   const moodResponses = {
     calma: "Entonces no hace falta hacer nada más. Respirar, mirar el vapor y quedarse un ratito también es un plan.",
     idea: "Llevate una pregunta sencilla: ¿qué cosa pequeña podría mejorarle el día a alguien? Las ideas lindas suelen empezar así.",
