@@ -2,12 +2,13 @@
 
 ## Comprobaciones básicas
 - [ ] Abrir el sitio y confirmar que se ve la casita ilustrada.
-- [ ] Avanzar y retroceder por los cuatro momentos del ritual.
-- [ ] Abrir cada puerta de la mesa y cerrar el diálogo con el botón y con el control de cierre.
-- [ ] Cambiar el cuento y la curiosidad.
+- [ ] Avanzar y retroceder por los cuatro momentos del ritual; al terminar, volver al comienzo.
+- [ ] Abrir cada puerta de la mesa y cerrar el diálogo con el botón, el control de cierre y el fondo.
+- [ ] Cambiar al menos cinco cuentos distintos y confirmar que título y tres párrafos se actualizan.
+- [ ] Cambiar la curiosidad varias veces.
 - [ ] Visitar los cuatro lugares del pueblo ilustrado.
 - [ ] Probar las tres opciones de la ronda.
-- [ ] Cambiar el consejo para emprender.
+- [ ] Cambiar todos los consejos para emprender.
 - [ ] Elegir cada estado de ánimo y comprobar que cambia el texto.
 - [ ] Escribir una nota, guardarla, recargar y confirmar que persiste en el mismo navegador.
 - [ ] Borrar la nota y comprobar que desaparece.
@@ -26,7 +27,8 @@
 - [ ] Revisar la consola del navegador en busca de errores.
 - [ ] Verificar que no haya identificadores HTML duplicados ni referencias rotas.
 - [ ] Comprobar que el sitio funciona sin iniciar sesión y sin backend propio.
+- [ ] Confirmar que todos los controles responden desde que se abre la página, sin tener que pulsar primero otro control.
 - [ ] No publicar el alias solidario hasta recibir el dato exacto y confirmado.
 
 ## Límite de las pruebas actuales
-Las comprobaciones de repositorio pueden verificar sintaxis, estructura y referencias de archivos. Las pruebas visuales y las interacciones reales requieren abrir la versión publicada en un navegador.
+Las comprobaciones de repositorio pueden verificar sintaxis, estructura y referencias de archivos. Las pruebas visuales y las interacciones reales requieren abrir la versión publicada en un navegador. No marcar las pruebas visuales como aprobadas sin realizarlas en un navegador real.
