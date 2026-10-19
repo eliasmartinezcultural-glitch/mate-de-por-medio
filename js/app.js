@@ -1,49 +1,15 @@
-/* Tomar mates con Elías · interacciones pequeñas, sin rastreo ni servicios externos */
+/* Interacciones locales, accesibles y sin rastreo. */
 (() => {
-  "use strict";
-
-  const menuButton = document.querySelector(".menu-toggle");
-  const navigation = document.querySelector("#site-navigation");
-
-  if (menuButton && navigation) {
-    menuButton.addEventListener("click", () => {
-      const open = menuButton.getAttribute("aria-expanded") !== "true";
-      menuButton.setAttribute("aria-expanded", String(open));
-      navigation.classList.toggle("is-open", open);
-    });
-
-    navigation.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menuButton.setAttribute("aria-expanded", "false");
-        navigation.classList.remove("is-open");
-      });
-    });
-  }
-
-  const quotes = [
-    "A veces, estar un rato también es hacer algo bueno.",
-    "No todo lo lindo tiene que servir para algo.",
-    "El mundo puede esperar mientras se enfría el agua.",
-    "Hay días que piden menos ruido y más cielo.",
-    "Las cosas pequeñas también merecen su tiempo.",
-    "Un ratito de calma no necesita explicación."
-  ];
-  const quoteButton = document.querySelector("#pause-button");
-  const quoteText = document.querySelector("#pause-quote");
-  let quoteIndex = 0;
-
-  if (quoteButton && quoteText) {
-    quoteButton.addEventListener("click", () => {
-      quoteIndex = (quoteIndex + 1) % quotes.length;
-      quoteText.textContent = quotes[quoteIndex];
-    });
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    const targetId = link.getAttribute("href").slice(1);
-    if (targetId && !document.getElementById(targetId)) {
-      link.setAttribute("aria-disabled", "true");
-      link.addEventListener("click", (event) => event.preventDefault());
-    }
-  });
+"use strict";
+const menuButton=document.querySelector(".menu-toggle"),navigation=document.querySelector("#site-navigation");
+if(menuButton&&navigation){menuButton.addEventListener("click",()=>{const open=menuButton.getAttribute("aria-expanded")!=="true";menuButton.setAttribute("aria-expanded",String(open));navigation.classList.toggle("is-open",open);});navigation.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{menuButton.setAttribute("aria-expanded","false");navigation.classList.remove("is-open");}));}
+const quotes=["A veces, estar un rato también es hacer algo bueno.","No todo lo lindo tiene que servir para algo.","El mundo puede esperar mientras se enfría el agua.","Hay días que piden menos ruido y más cielo.","Las cosas pequeñas también merecen su tiempo.","Un ratito de calma no necesita explicación."];
+const quoteButton=document.querySelector("#pause-button"),quoteText=document.querySelector("#pause-quote");let quoteIndex=0;
+if(quoteButton&&quoteText)quoteButton.addEventListener("click",()=>{quoteIndex=(quoteIndex+1)%quotes.length;quoteText.textContent=quotes[quoteIndex];});
+const grid=document.querySelector("#content-grid"),search=document.querySelector("#content-search"),count=document.querySelector("#results-count"),empty=document.querySelector("#empty-results"),chips=[...document.querySelectorAll("[data-filter]")],items=Array.isArray(window.TOMAR_MATES_CONTENIDO)?window.TOMAR_MATES_CONTENIDO:[];let activeFilter="todos";
+const esc=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function render(){if(!grid)return;const term=(search?.value||"").trim().toLocaleLowerCase("es-AR");const shown=items.filter(item=>(activeFilter==="todos"||item.tipo===activeFilter)&&[item.titulo,item.etiqueta,item.resumen,item.texto].join(" ").toLocaleLowerCase("es-AR").includes(term));grid.innerHTML=shown.map(item=>{const action=item.archivo?'<a class="content-action" href="'+esc(item.archivo)+'" download>Descargar dibujo <span aria-hidden="true">↓</span></a>':'<button class="content-action read-item" type="button" data-open="'+esc(item.id)+'">Leer esta cosita <span aria-hidden="true">↗</span></button>';return '<article class="content-card tone-'+esc(item.color)+'"><div class="content-card-top"><span class="content-icon" aria-hidden="true">'+esc(item.icono)+'</span><span class="content-label">'+esc(item.etiqueta)+'</span></div><h3>'+esc(item.titulo)+'</h3><p>'+esc(item.resumen)+'</p>'+action+'</article>';}).join("");if(count)count.textContent=shown.length?shown.length+(shown.length===1?" cosita para descubrir.":" cositas para descubrir."):"No encontré coincidencias.";if(empty)empty.hidden=shown.length>0;}
+if(grid){render();search?.addEventListener("input",render);chips.forEach(chip=>chip.addEventListener("click",()=>{activeFilter=chip.dataset.filter||"todos";chips.forEach(button=>{const selected=button===chip;button.classList.toggle("is-active",selected);button.setAttribute("aria-pressed",String(selected));});render();}));grid.addEventListener("click",event=>{const button=event.target.closest("[data-open]");if(!button)return;const item=items.find(entry=>entry.id===button.dataset.open);if(item)openReader(item);});}
+function openReader(item){let dialog=document.querySelector("#reader-dialog");if(!dialog){dialog=document.createElement("dialog");dialog.id="reader-dialog";dialog.className="reader-dialog";dialog.setAttribute("aria-labelledby","reader-title");dialog.innerHTML='<form method="dialog"><button class="reader-close" aria-label="Cerrar lectura">×</button></form><p class="reader-label" id="reader-label"></p><h2 id="reader-title"></h2><div class="reader-body" id="reader-body"></div><p class="reader-signature">Un ratito tranquilo · Tomar mates con Elías</p>';document.body.appendChild(dialog);dialog.addEventListener("click",event=>{if(event.target===dialog)dialog.close();});}dialog.querySelector("#reader-label").textContent=item.etiqueta;dialog.querySelector("#reader-title").textContent=item.titulo;dialog.querySelector("#reader-body").replaceChildren(...String(item.texto||"").split("\n\n").map(text=>{const p=document.createElement("p");p.textContent=text;return p;}));if(typeof dialog.showModal==="function")dialog.showModal();else alert(item.titulo+"\n\n"+item.texto);}
+document.querySelectorAll('a[href^="#"]').forEach(link=>{const id=link.getAttribute("href").slice(1);if(id&&!document.getElementById(id)){link.setAttribute("aria-disabled","true");link.addEventListener("click",event=>event.preventDefault());}});
 })();
