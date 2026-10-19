@@ -1,36 +1,37 @@
-# Mate de por Medio
+# El rinconcito de Elías · Mate de por Medio
 
-Un pequeño mundo ilustrado alrededor del ritual de tomar mate. La experiencia es apacible, artesanal y autónoma: una mesa matera, cuentos, curiosidades, un pueblo de ficción, una galería de dibujos originales, consejos sencillos para emprender y un cuaderno personal local.
+Una página independiente, cálida y sin apuro: cuentos breves, curiosidades sobre el mate, pequeños consejos y recursos originales para descargar. Está pensada para funcionar sola, sin que Elías tenga que atenderla todos los días.
 
-## Cómo está organizado
+## Experiencia pública
 
-- `index.html`: estructura semántica, navegación, escenas y controles.
-- `styles.css`: sistema visual, colores, tipografías, composición adaptable y movimiento suave.
-- `content.js`: biblioteca editorial: 4 momentos del ritual, 12 curiosidades, 15 cuentos breves, 8 consejos para emprender, 16 preguntas para conversar, 6 pequeñas prácticas opcionales y 3 postales locales con fuentes, respuestas para cuatro estados de ánimo y textos de 10 rincones/diálogos.
-- `app.js`: comportamiento de la experiencia, diálogos, navegación por el ritual, cuentos y curiosidades rotativas, consejos, respuestas de ánimo, guardado local y controles accesibles.
-- `docs/ARQUITECTURA.md`: capas técnicas y reglas para mantener el proyecto estable.
-- `docs/PRUEBAS.md`: lista de comprobaciones antes de publicar cambios.
-- `docs/CONTENIDO-Y-ESTILO.md`: dirección visual y criterios editoriales.
+- **Bienvenida y pausa:** presentación breve, identidad visual artesanal y navegación sencilla.
+- **Leer:** cuentos de ficción rotativos tomados de `content.js`.
+- **Aprender:** curiosidades rotativas sobre el mate y el ritual.
+- **Respirar:** consejitos breves que cambian sin recargar la página.
+- **Llevar:** tres recursos originales en SVG, enlazados como descargas directas.
+- **Colaborar:** cajita voluntaria visible, con el alias deliberadamente pendiente hasta confirmar el dato real. No hay presión, montos sugeridos ni contenido bloqueado.
 
-## Principios del proyecto
+## Estructura técnica
 
-1. **Primero la calma:** nada de contadores regresivos, ventanas emergentes invasivas o estímulos estridentes.
-2. **Acceso libre:** las historias y actividades no se bloquean por colaborar.
-3. **Autonomía:** sitio estático, sin cuenta, servidor propio, base de datos ni servicio de pago.
-4. **Privacidad prudente:** la nota personal se guarda solo en el almacenamiento local del navegador que la persona usa. No se transmite ni se sincroniza; borrar los datos del navegador puede borrarla.
-5. **Accesibilidad:** controles con teclado, mensajes de estado, etiquetas, diseño adaptable y respeto por la preferencia de movimiento reducido del sistema.
-6. **Claridad editorial:** los cuentos y habitantes son ficción. Los datos sobre San Patricio del Chañar deben verificarse y acreditarse antes de ampliar el contenido histórico.
+- `index.html`: estructura semántica, navegación, ofertas, descargas y cajita de colaboración.
+- `styles.css`: sistema visual, paleta, composición responsive, foco accesible y movimiento reducido.
+- `content.js`: biblioteca editorial de cuentos y curiosidades.
+- `app.js`: rotación de contenido, renderizado seguro con `textContent` y configuración de colaboración.
+- `descargas/dibujo-matero.svg`: lámina lineal para pintar.
+- `descargas/tarjetita-pausa.svg`: tarjeta para guardar o compartir.
+- `descargas/fondo-matero.svg`: fondo de pantalla.
+- `docs/`: arquitectura, contenido y pruebas.
 
-## Publicación
+## Configurar la colaboración
 
-Sitio estático preparado para GitHub Pages. Los archivos se cargan en el orden `content.js` y luego `app.js`.
+En `app.js`, buscar la línea `const COLLABORATION_ALIAS = "";` y reemplazar las comillas vacías por el alias **exacto, confirmado por Elías**. No cargar un alias de ejemplo ni inventado. Una vez configurado, el botón permite copiarlo al portapapeles; la persona realiza la transferencia por su cuenta desde su banco o billetera. Si el alias está vacío, la cajita informa con claridad que está en preparación y mantiene deshabilitado el botón.
 
-## Pendiente antes de publicar una colaboración real
+La colaboración es voluntaria. No debe condicionar el acceso a cuentos, curiosidades ni descargas. Este sitio no procesa pagos, no verifica transferencias y no necesita un servidor propio.
 
-Configurar el alias correcto de la cajita solidaria. No se publica ningún alias inventado ni se bloquea contenido por colaborar.
+## Publicación y privacidad
 
-## Notas de la versión
+Sitio estático para GitHub Pages; no usa cuentas, base de datos ni analítica propia. El sitio no solicita datos personales. Los archivos descargables están guardados directamente en el repositorio, no se generan mediante una sesión ni requieren que el autor esté conectado.
 
-- El control superior pausa o reanuda el movimiento decorativo; no activa sonido.
-- El cuaderno personal es local al navegador y no se comparte entre dispositivos.
-- El proyecto no incorpora analítica ni rastreo propio.
+## Pruebas pendientes
+
+Las comprobaciones de código y rutas no reemplazan la revisión visual en navegador real. Antes de considerar la versión terminada, probar escritorio y móvil, botones, descargas, foco de teclado y la configuración del alias confirmado.
