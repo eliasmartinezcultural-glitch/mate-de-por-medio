@@ -13,6 +13,7 @@
 3. Cuando se agregue un nuevo control, contemplar teclado, foco visible y mensajes comprensibles.
 4. No agregar alias de pago hasta que Elías confirme el dato exacto.
 5. No presentar historias ficticias como hechos históricos del Chañar.
+6. Las preguntas y prácticas no recogen respuestas ni crean perfiles de visitantes.
 6. Probar vista móvil, vista de escritorio, consola del navegador y guardado/borrado de la nota tras cada cambio grande.
 
 ## Alcance de privacidad
