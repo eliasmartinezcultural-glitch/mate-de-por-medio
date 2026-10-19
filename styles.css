@@ -61,3 +61,18 @@ body.motion-paused .tree-sway,body.motion-paused .steam,body.motion-paused .ritu
 .prompt-footnote{margin:18px auto 0;max-width:700px;text-align:center;font-size:10px;line-height:1.8;color:#8b8271}
 @media(max-width:700px){.round-prompts{padding-top:0;padding-bottom:54px}.prompt-grid{grid-template-columns:1fr;gap:11px}.prompt-card{padding:24px 21px;border-radius:18px}.prompt-main{font-size:25px;min-height:0;margin-top:19px}.prompt-card>p:not(.prompt-main){min-height:0}.prompt-ornament{right:18px;top:15px}}
 @media(prefers-reduced-motion:reduce){.prompt-card{transition:none!important}}
+
+
+/* Postales documentadas: fuente visible y contexto editorial */
+.local-postcards{padding-top:10px;padding-bottom:70px}
+.postcards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;max-width:1080px;margin:0 auto}
+.postcard{position:relative;min-width:0;display:flex;flex-direction:column;align-items:flex-start;padding:25px 23px 22px;border:1px solid #e3d8c5;border-radius:18px;background:#fffaf0;box-shadow:0 9px 28px rgba(92,77,54,.035)}
+.postcard:nth-child(2){background:#f0eadc}.postcard:nth-child(3){background:#e9ecdf;border-color:#d9dfcf}
+.postcard-mark{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid #cfc3ab;border-radius:50%;font-size:9px;letter-spacing:.06em;color:#7f8069;margin-bottom:17px}
+.postcard h3{font:500 23px/1.2 var(--serif);color:#514b3d;margin:0 0 11px}
+.postcard p{font:13px/1.8 var(--serif);color:#6e6b5c;margin:0 0 17px;flex:1}
+.postcard a{font-size:10px;line-height:1.7;font-weight:700;color:#52684f;text-decoration-thickness:1px;text-underline-offset:3px}
+.postcard a:hover{text-decoration-thickness:2px}
+.postcard small{display:block;margin-top:11px;padding-top:10px;border-top:1px solid rgba(130,119,95,.2);font-size:9px;line-height:1.7;color:#8a806e}
+.postcards-note{max-width:850px;margin:18px auto 0;text-align:center;font-size:10px;line-height:1.9;color:#8b8271}
+@media(max-width:800px){.postcards-grid{grid-template-columns:1fr;max-width:620px}.postcard{padding:22px}.postcard-mark{margin-bottom:13px}.postcard p{flex:initial}.local-postcards{padding-bottom:54px}}
