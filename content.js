@@ -68,7 +68,7 @@ window.MATE_CONTENT = Object.freeze({
       "En la placita había un banco que recibía sol por la mañana y sombra por la tarde. Nadie lo consideraba especial, hasta que una vecina empezó a sentarse allí cada día.",
       "Primero iba a descansar las piernas. Después llevó un libro, más tarde una bolsa con mandarinas para compartir. De a poco, otras personas empezaron a saludarla.",
       "El banco siguió siendo el mismo. Lo distinto fue que alguien se había detenido lo suficiente como para descubrir que un lugar común también podía convertirse en encuentro."
-    ]}
+    ]},
     {tag:"CUENTITO DE LA RONDA · FICCIÓN", title:"La radio del vecino", paragraphs:[
       "En la casa de enfrente, una radio pequeña acompañaba las tareas de la mañana. A veces se escuchaba una canción conocida; otras, una voz que parecía hablar justo de ese día.",
       "Una tarde la radio dejó de funcionar. Toto abrió la tapa con cuidado, pero antes de tocar nada llamó a quien la conocía de memoria. Entre los dos encontraron un cable flojo y recordaron canciones que hacía años no escuchaban.",
