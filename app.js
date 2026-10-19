@@ -173,6 +173,21 @@
   $("#surprise-top").addEventListener("click", surprise);
   $("#donation-open").addEventListener("click", () => openDetail("donation"));
 
+  let questionIndex = 0;
+  let practiceIndex = 0;
+
+  $("#next-question").addEventListener("click", () => {
+    questionIndex = (questionIndex + 1) % data.roundQuestions.length;
+    $("#round-question").textContent = data.roundQuestions[questionIndex];
+  });
+
+  $("#next-practice").addEventListener("click", () => {
+    practiceIndex = (practiceIndex + 1) % data.tinyPractices.length;
+    const practice = data.tinyPractices[practiceIndex];
+    $("#practice-title").textContent = practice.title;
+    $("#practice-text").textContent = practice.text;
+  });
+
   $("#sound-toggle").addEventListener("click", () => {
     const paused = document.body.classList.toggle("motion-paused");
     $("#sound-toggle").setAttribute("aria-pressed", String(paused));
