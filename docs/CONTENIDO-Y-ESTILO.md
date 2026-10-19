@@ -21,8 +21,10 @@ No todo visitante debe recorrer todos los pasos. Cada rincón tiene que funciona
 El archivo `content.js` reúne el contenido que puede editarse sin cambiar la lógica de la página:
 - 4 momentos del ritual.
 - 12 curiosidades sobre el mate y el marco ficticio del proyecto.
-- 9 cuentos cortos con tres párrafos cada uno.
+- 15 cuentos cortos con tres párrafos cada uno.
 - 8 ideas prácticas para pequeños emprendimientos.
+- 16 preguntas abiertas para acompañar conversaciones, sin guardar respuestas.
+- 6 pequeñas prácticas opcionales de observación y encuentro.
 - Respuestas amables para cuatro estados de ánimo.
 - Textos extensos para las puertas del mate, cuaderno, ventana, ronda, patio de Jacinta, taller de Toto, placita, rincón de Lola, cajita solidaria y sorpresa.
 
@@ -69,3 +71,10 @@ Los personajes deben sonar distintos sin convertirse en caricaturas. Hablan con 
 3. Incorporar nuevas historias solo si traen una situación, voz o imagen distinta a las ya publicadas.
 4. Preparar actividades opcionales que puedan hacerse sin cuenta, sin registro y sin compartir información personal.
 5. Mantener una lista de fuentes para los datos de historia local, cultura y naturaleza; separar claramente memoria oral, opinión, ficción y dato documentado.
+
+
+## La ronda como contenido participativo sin registro
+Las preguntas no se envían ni se guardan. Funcionan como disparadores para pensar, conversar o pasar de largo. Las pequeñas prácticas son invitaciones breves, nunca tareas obligatorias ni consejos de salud. No hay puntuación, racha ni seguimiento del visitante.
+
+## Biblioteca de relatos
+Los cuentos deben poder leerse por separado, sin orden obligatorio. Cada historia necesita una escena concreta y una voz distinta; evitar que todas repitan la misma moraleja. Los personajes son ficticios y los detalles de sus vidas no deben presentarse como testimonios reales.
