@@ -63,7 +63,7 @@
 
   // Único punto de configuración del aporte. Cargar aquí el alias confirmado;
   // mientras esté vacío, la web explica el estado y nunca inventa datos de pago.
-  const COLLABORATION_ALIAS = "";
+  const COLLABORATION_ALIAS = "ocarina.guitarra";
   const alias = COLLABORATION_ALIAS.trim();
   const aliasNode = $("support-alias");
   const copyButton = $("copy-alias");
