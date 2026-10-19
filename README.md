@@ -1,34 +1,39 @@
 # Tomar mates con Elías
 
-Un rinconcito personal e independiente para compartir pequeñas historias, curiosidades, cuentitos y pinturitas inspiradas en San Patricio del Chañar.
+Un rinconcito personal e independiente, inspirado en San Patricio del Chañar. La intención es que se sienta como una pequeña casa abierta: historias cuidadas, cuentos, dibujos para pintar y detalles cotidianos, todo sin apuro.
 
-## Estructura
+## Archivos
 
-- `index.html`: portada, navegación y secciones editoriales.
-- `css/styles.css`: identidad visual adaptable a computadora, tablet y celular.
-- `js/app.js`: comprobación ligera de enlaces internos; no usa servicios externos.
-- `js/contenido.js`: reservado para organizar contenido editorial futuro.
-- `assets/`: ilustraciones y recursos gráficos propios.
-- `descargas/pinturitas/`: archivos imprimibles gratuitos.
+- `index.html`: estructura y contenido de la portada.
+- `css/styles.css`: sistema visual, composición editorial y reglas responsive.
+- `js/app.js`: menú móvil, frases de pausa y validación ligera de enlaces internos.
+- `js/contenido.js`: espacio separado para organizar futuras piezas editoriales.
+- `assets/casita-chañar.svg`: ilustración original vectorial creada para el sitio.
+- `descargas/pinturitas/`: carpeta reservada para hojas imprimibles.
 
-## Decisiones de diseño
+## Dirección visual
 
-- Una bienvenida cálida, una ilustración dibujada en SVG y cuatro propuestas principales.
-- Paleta crema, verde salvia, terracota y tonos suaves; tipografía del sistema, sin fuentes externas.
-- Navegación por anclas, HTML semántico, foco visible, enlace para saltar al contenido y respeto por la preferencia de movimiento reducido.
-- Sin cuentas, base de datos, comentarios, formularios, seguimiento de visitantes, audio automático ni dependencias externas.
-- La web no presenta como disponibles historias o archivos que todavía no fueron preparados: los espacios en preparación están identificados con claridad.
-- Todo el contenido será gratuito; cualquier colaboración futura será opcional.
-- Verificar los datos históricos y distinguir claramente la ficción.
+- Editorial cálida con influencias de cuaderno de campo y revista cultural independiente.
+- Paleta de papel marfil, verde profundo, salvia, terracota y azules suaves.
+- Ilustraciones vectoriales integradas y pequeñas viñetas hechas en SVG/CSS, no imágenes de stock.
+- Tipografía del sistema para no depender de servicios externos.
+- Portada asimétrica, tarjetas ilustradas, cinta editorial, sección de pausa y cierre personal.
+- Adaptación a escritorio, tablet y pantallas angostas; navegación móvil plegable.
+- Accesibilidad básica: HTML semántico, enlace para saltar al contenido, estados de foco visibles, etiquetas accesibles, texto alternativo y respeto por movimiento reducido.
 
-## Revisión antes de publicar
+## Límites deliberados
 
-1. Comprobar los enlaces internos y que cada sección tenga su destino.
-2. Revisar la lectura en anchuras de 320, 390, 680 y escritorio.
-3. Probar navegación por teclado, contraste, foco visible y movimiento reducido.
-4. Añadir y revisar las primeras historias, cuentos y archivos descargables antes de anunciarlos.
-5. Activar GitHub Pages solo después de la revisión final.
+- No hay analítica, rastreo de visitantes, cuentas, comentarios, formularios, base de datos, audio automático ni servicios externos.
+- Las secciones editoriales se muestran como en preparación hasta que tengan contenido real.
+- Las historias históricas se publicarán con fuentes; la ficción se marcará claramente.
+- Todo el contenido será gratuito; una eventual colaboración será voluntaria.
+- No se activa GitHub Pages hasta completar la revisión visual y funcional.
 
-## Publicación
+## Lista de revisión antes de publicar
 
-GitHub Pages todavía no debe activarse hasta completar la revisión de diseño y funcionamiento.
+1. Verificar la carga de la ilustración SVG y todos los enlaces internos.
+2. Revisar a mano la presentación a 320, 390, 680, 1024 y escritorio amplio.
+3. Probar el menú con teclado y pantalla táctil, el foco visible y el botón de frases.
+4. Confirmar contraste, lectura y ausencia de desbordes horizontales.
+5. Preparar al menos una primera pieza real en cada sección antes de promocionar el sitio.
+6. Activar GitHub Pages solo después de esa revisión.
