@@ -27,3 +27,21 @@ body.motion-paused .tree-sway,body.motion-paused .steam,body.motion-paused .ritu
 @media(max-width:850px){.personal-grid{gap:12px}.mood-card,.private-note-card{padding:23px}.mood-choice{padding:10px 8px}}
 @media(max-width:600px){.welcome-copy:before{left:-7px;top:-12px;width:24px;height:24px}.hero-art:after{inset:6px;border-radius:13px}.personal-section{padding-top:5px;padding-bottom:55px}.personal-heading h2{font-size:34px}.personal-grid{grid-template-columns:1fr;gap:12px}.mood-card,.private-note-card{padding:22px 18px;border-radius:18px}.mood-card h3,.private-note-card h3{font-size:24px}.mood-choice{min-height:58px}.note-actions{gap:10px}.note-actions .primary-button{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.topbar nav a:after{transition:none}.object-card,.mood-choice{transition:none!important}}
+
+/* Galería artesanal y rincón de ideas */
+.workshop-section{padding-top:15px;padding-bottom:74px}
+.workshop-layout{display:grid;grid-template-columns:1.55fr .8fr;gap:17px;max-width:1060px;margin:auto;align-items:stretch}
+.sketch-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.sketch-card{min-width:0;overflow:hidden;border:1px solid #e3d8c5;background:#fff9ee;border-radius:18px;padding:10px 10px 14px;transition:transform .2s,box-shadow .2s}
+.sketch-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(92,77,54,.08)}
+.sketch-art{height:165px;display:grid;place-items:center;border-radius:12px;overflow:hidden}
+.sketch-art svg{width:100%;height:100%;display:block}
+.sketch-mate .sketch-art{background:#e4e9da}.sketch-valley .sketch-art{background:#f0e3cc}.sketch-flower .sketch-art{background:#e7e9dd}
+.sketch-caption{display:block;font-size:9px;line-height:1.5;letter-spacing:.06em;color:#857a68;padding:12px 5px 0}
+.idea-card{background:#e8e9dc;border:1px solid #d8ddcc;border-radius:20px;padding:25px;display:flex;flex-direction:column;justify-content:center;min-height:100%}
+.idea-card h3{font:500 26px/1.2 var(--serif);margin:14px 0 12px}
+.idea-card>p{font:14px/1.9 var(--serif);color:#6e7564;min-height:125px;margin:0}
+.idea-footer{display:flex;align-items:center;gap:10px;border-top:1px solid #d2d8c7;margin-top:18px;padding-top:13px}
+.idea-footer>span{font-size:22px;color:#8a9a7d}.idea-footer .text-button{text-align:left;font-size:11px}
+@media(max-width:850px){.workshop-layout{grid-template-columns:1fr}.idea-card{min-height:0}.idea-card>p{min-height:0}.sketch-art{height:150px}}
+@media(max-width:600px){.workshop-section{padding-top:0;padding-bottom:55px}.sketch-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.sketch-card:last-child{grid-column:1/-1}.sketch-card:last-child .sketch-art{height:130px}.sketch-art{height:125px}.sketch-caption{font-size:9px;padding-top:9px}.idea-card{padding:22px 18px}.idea-card h3{font-size:24px}}
