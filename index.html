@@ -13,7 +13,7 @@
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="topbar">
     <a class="brand" href="#inicio" aria-label="Mate de por Medio, inicio"><span class="brand-mark" aria-hidden="true">☕</span><span><strong>Mate de por Medio</strong><small>un rinconcito para estar</small></span></a>
-    <nav aria-label="Navegación principal"><a href="#ritual">El ritual</a><a href="#cuaderno">El cuaderno</a><a href="#pueblo">El pueblo</a></nav>
+    <nav aria-label="Navegación principal"><a href="#ritual">El ritual</a><a href="#cuaderno">El cuaderno</a><a href="#pueblo">El pueblo</a><a href="#mi-rincon">Mi rincón</a></nav>
     <button class="quiet-button" id="sound-toggle" type="button" aria-pressed="false" title="Pausar o reanudar los movimientos suaves">❧ <span>Movimiento: suave</span></button>
   </header>
   <main id="contenido">
@@ -80,6 +80,24 @@
       <p class="map-note"><span aria-hidden="true">❧</span> Este es un pueblo de ficción, inspirado en la calidez de la vida cotidiana. Las postales del Chañar son nuestro guiño a la tierra real.</p>
     </section>
     <section class="small-game section-wrap" aria-labelledby="game-title"><div class="game-card"><div class="game-copy"><p class="eyebrow">Un juego sin apuro</p><h2 id="game-title">Armemos la ronda.</h2><p>Si hoy pudieras invitar una cosa a la mesa, ¿qué elegirías?</p></div><div class="game-options" role="group" aria-label="Elegí algo para la ronda"><button type="button" class="game-choice" data-choice="cuento"><span aria-hidden="true">📖</span><strong>Un cuento</strong></button><button type="button" class="game-choice" data-choice="tortas"><span aria-hidden="true">🥮</span><strong>Algo rico</strong></button><button type="button" class="game-choice" data-choice="amigo"><span aria-hidden="true">🪑</span><strong>Una visita</strong></button></div><p class="game-response" id="game-response" aria-live="polite">No hay respuestas equivocadas. La ronda se arma entre todos.</p></div></section>
+    <section class="personal-section section-wrap" id="mi-rincon" aria-labelledby="personal-title">
+      <div class="personal-heading"><p class="eyebrow">Un lugarcito para vos</p><h2 id="personal-title">¿Cómo llegaste a la ronda?</h2><p>No hace falta explicar nada. Elegí una sensación, o simplemente dejá una idea en el cuaderno.</p></div>
+      <div class="personal-grid">
+        <div class="mood-card"><span class="personal-number">01 · UNA PAUSA</span><h3>¿Qué te vendría bien?</h3>
+          <div class="mood-options" role="group" aria-label="Elegí qué te vendría bien">
+            <button class="mood-choice" type="button" data-mood="calma" aria-pressed="false"><span aria-hidden="true">☁</span><strong>Un poco de calma</strong></button>
+            <button class="mood-choice" type="button" data-mood="idea" aria-pressed="false"><span aria-hidden="true">✎</span><strong>Una idea nueva</strong></button>
+            <button class="mood-choice" type="button" data-mood="sonrisa" aria-pressed="false"><span aria-hidden="true">☼</span><strong>Una sonrisa</strong></button>
+            <button class="mood-choice" type="button" data-mood="curiosidad" aria-pressed="false"><span aria-hidden="true">✿</span><strong>Algo curioso</strong></button>
+          </div><p class="mood-response" id="mood-response" aria-live="polite">La ronda está abierta. Podés quedarte un momento sin elegir nada.</p>
+        </div>
+        <div class="private-note-card"><span class="personal-number">02 · TU CUADERNO</span><h3>Dejá una idea en papel.</h3><p>Una frase, algo que quieras recordar o una pequeña idea para mañana.</p>
+          <label class="visually-hidden" for="private-note">Tu nota personal</label><textarea id="private-note" rows="4" maxlength="600" placeholder="Hoy me gustaría recordar que…"></textarea>
+          <div class="note-actions"><button class="primary-button" id="save-note" type="button">Guardar en este dispositivo <span aria-hidden="true">♡</span></button><button class="text-button" id="clear-note" type="button">Borrar mi nota</button></div>
+          <p class="note-status" id="note-status" role="status" aria-live="polite">Privado: queda en este navegador. No se envía ni se sincroniza con otros dispositivos.</p>
+        </div>
+      </div>
+    </section>
     <section class="host-section section-wrap" aria-labelledby="host-title"><div class="host-note"><span class="host-doodle" aria-hidden="true">☕</span><div><p class="eyebrow">Una nota de Elías</p><h2 id="host-title">Gracias por hacerte un lugar.</h2><p>Este pequeño mundo nació para recordar algo sencillo: a veces, compartir un mate imaginario, una historia o un rato de calma alcanza para mejorar el día.</p><p>Ojalá encuentres acá algo que te haga bien. La puerta queda abierta.</p><span class="signature">Elías <span aria-hidden="true">♡</span></span></div></div><button class="donation-button" id="donation-open" type="button"><span aria-hidden="true">♡</span><span><strong>La cajita solidaria</strong><small>Para quien quiera ayudar a mantener este rinconcito.</small></span><span class="donation-arrow" aria-hidden="true">↗</span></button></section>
   </main>
   <footer class="footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">☕</span><span><strong>Mate de por Medio</strong><small>Hecho con cariño, sin apuro.</small></span></a><p>Un mundo pequeño para disfrutar a tu manera.</p><a href="#inicio" class="back-top">Volver a la mesa ↑</a></footer>
