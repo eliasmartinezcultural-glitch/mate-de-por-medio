@@ -2,7 +2,7 @@
 
 ## Capas
 - **Presentación:** `index.html` y `styles.css`. La página sigue funcionando como documento estático.
-- **Contenido:** `content.js` publica el objeto `window.MATE_CONTENT`. Los textos pueden evolucionar sin reescribir los eventos.
+- **Contenido:** `content.js` publica `window.MATE_CONTENT`: ritual, curiosidades, cuentos, consejos, preguntas abiertas, pequeñas prácticas y postales documentadas con fuentes. Los textos pueden evolucionar sin reescribir los eventos.
 - **Interacción:** `app.js` conecta los botones, muestra diálogos, cambia historias y curiosidades, y gestiona la nota personal.
 - **Persistencia local:** solo se usa `localStorage` para la nota explícita del visitante. No hay cuenta ni sincronización.
 - **Publicación:** GitHub Pages sirve archivos estáticos; no hay servidor propio ni base de datos.
@@ -13,6 +13,8 @@
 3. Cuando se agregue un nuevo control, contemplar teclado, foco visible y mensajes comprensibles.
 4. No agregar alias de pago hasta que Elías confirme el dato exacto.
 5. No presentar historias ficticias como hechos históricos del Chañar.
+6. Las preguntas y prácticas no recogen respuestas ni crean perfiles de visitantes.
+7. Las postales documentadas deben mantener visible el enlace a la fuente y el contexto editorial.
 6. Las preguntas y prácticas no recogen respuestas ni crean perfiles de visitantes.
 6. Probar vista móvil, vista de escritorio, consola del navegador y guardado/borrado de la nota tras cada cambio grande.
 
