@@ -61,8 +61,7 @@
     renderTip();
   });
 
-  // Único punto de configuración del aporte. Cargar aquí el alias confirmado;
-  // mientras esté vacío, la web explica el estado y nunca inventa datos de pago.
+  // Único punto de configuración de la colaboración voluntaria; el alias fue confirmado por el autor.
   const COLLABORATION_ALIAS = "ocarina.guitarra";
   const alias = COLLABORATION_ALIAS.trim();
   const aliasNode = $("support-alias");
