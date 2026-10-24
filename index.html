@@ -3,30 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4eee2">
-  <title>Tomar mates con Elías</title>
+  <meta name="theme-color" content="#f3eee3">
+  <meta name="description" content="RUMA: un rinconcito de recursos bonitos, útiles y gratuitos para descargar. Llevate lo que te sirva y colaborá voluntariamente si querés.">
+  <title>RUMA — Un rinconcito para llevar</title>
   <style>
-    :root{color-scheme:light;--paper:#f4eee2;--ink:#40382e;--muted:#766b5d;--leaf:#65745b;--line:#ded4c3}
+    :root{--cream:#f3eee3;--paper:#fffdf8;--ink:#3f4034;--muted:#777567;--green:#64765a;--soft:#e7e8d9;--peach:#f2dfcf;--line:#e5ddce}
     *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
-    main{width:min(100%,620px);text-align:center;padding:clamp(28px,7vw,64px) 20px}
-    .mate{font-size:54px;line-height:1;margin-bottom:28px}
-    .eyebrow{font:12px/1.5 system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--leaf)}
-    h1{font-size:clamp(36px,8vw,58px);font-weight:normal;line-height:1.06;margin:18px 0}
-    p{font-size:18px;line-height:1.7;color:var(--muted);max-width:430px;margin:0 auto}
-    .rule{width:56px;height:1px;background:var(--line);margin:30px auto}
-    footer{font:12px/1.6 system-ui,sans-serif;color:var(--muted);letter-spacing:.04em}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+    a{color:inherit}
+    .wrap{width:min(100% - 32px,1000px);margin:auto}
+    header{padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-size:28px;letter-spacing:.15em;font-weight:bold}
+    .tag{font:12px/1.4 system-ui,sans-serif;color:var(--muted)}
+    .hero{padding:clamp(38px,8vw,84px) 0 50px;text-align:center}
+    .symbol{font-size:48px;margin-bottom:18px}
+    .eyebrow{font:11px/1.5 system-ui,sans-serif;letter-spacing:.19em;text-transform:uppercase;color:var(--green)}
+    h1{font-size:clamp(38px,7vw,68px);line-height:1.04;font-weight:normal;letter-spacing:-.035em;margin:18px auto;max-width:760px}
+    .intro{font-size:clamp(17px,2.4vw,20px);line-height:1.75;color:var(--muted);max-width:600px;margin:0 auto}
+    .note{display:inline-block;margin-top:25px;padding:11px 17px;border:1px solid var(--line);border-radius:30px;background:rgba(255,253,248,.6);font:13px/1.5 system-ui,sans-serif}
+    .section-head{text-align:center;padding:22px 0 25px}
+    h2{font-size:clamp(27px,4vw,38px);font-weight:normal;margin:10px 0}
+    .section-head p{font:15px/1.7 system-ui,sans-serif;color:var(--muted);max-width:520px;margin:0 auto}
+    .shelves{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding-bottom:54px}
+    .shelf{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:185px}
+    .shelf:nth-child(2){background:#f8eee4}.shelf:nth-child(3){background:#edf0e6}.shelf:nth-child(4){background:#f5ead9}
+    .emoji{font-size:30px}
+    .shelf h3{font-size:23px;font-weight:normal;margin:14px 0 8px}
+    .shelf p{font:14px/1.7 system-ui,sans-serif;color:var(--muted);margin:0}
+    .shelf .soon{display:inline-block;margin-top:17px;font:11px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+    .honor{margin:0 auto 56px;max-width:760px;background:var(--soft);border-radius:22px;padding:clamp(25px,5vw,42px);text-align:center}
+    .honor h2{margin-top:0}
+    .honor p{font-size:16px;line-height:1.8;color:#626654;max-width:570px;margin:12px auto}
+    .alias{display:inline-block;margin-top:13px;padding:13px 18px;border:1px dashed #9ba28c;border-radius:12px;font:14px system-ui,sans-serif;background:rgba(255,255,255,.45)}
+    .small{font:12px/1.7 system-ui,sans-serif;color:var(--muted)}
+    footer{text-align:center;border-top:1px solid var(--line);padding:24px 0 34px;font:12px/1.8 system-ui,sans-serif;color:var(--muted)}
+    @media(max-width:560px){.shelves{grid-template-columns:1fr;gap:12px}.shelf{min-height:0;padding:22px}.hero{padding-top:36px}header{align-items:flex-start}.tag{text-align:right;max-width:140px}}
   </style>
 </head>
 <body>
+  <header class="wrap">
+    <div class="brand" aria-label="RUMA">RUMA<span style="color:var(--green)">.</span></div>
+    <div class="tag">Un rinconcito para llevar<br>Hecho con cariño</div>
+  </header>
   <main>
-    <div class="mate" aria-hidden="true">🧉</div>
-    <div class="eyebrow">Un lugar sin apuro</div>
-    <h1>Tomar mates<br>con Elías</h1>
-    <div class="rule"></div>
-    <p>Estamos preparando este rinconcito desde cero. Pronto habrá una mesa, un mate y tiempo para quedarse un rato.</p>
-    <div class="rule"></div>
-    <footer>Sin apuro. Sin obligación. A tu tiempo.</footer>
+    <section class="hero wrap">
+      <div class="symbol" aria-hidden="true">🍊 ☕</div>
+      <div class="eyebrow">Pasá · Elegí · Llevate algo lindo</div>
+      <h1>Hay cosas que hacen bien.<br>Compartámoslas.</h1>
+      <p class="intro">RUMA es un rinconcito de cositas bonitas, ideas y recursos útiles para descargar. Entrá cuando quieras, elegí lo que te sirva y llevátelo. No necesitás pedir permiso ni dejar nada a cambio.</p>
+      <div class="note">🌱 Todo funciona a tu ritmo. La colaboración es voluntaria.</div>
+    </section>
+    <section class="wrap" aria-labelledby="recursos">
+      <div class="section-head">
+        <div class="eyebrow">Las pequeñas cosas también suman</div>
+        <h2 id="recursos">¿Qué te gustaría llevar hoy?</h2>
+        <p>Estamos preparando las estanterías. Cada recurso tendrá su descripción y su descarga directa, para que no tengas que ir de una página a otra.</p>
+      </div>
+      <div class="shelves">
+        <article class="shelf"><div class="emoji" aria-hidden="true">🎨</div><h3>Dibujos y cositas lindas</h3><p>Para imprimir, regalar, pintar, decorar o disfrutar un ratito.</p><span class="soon">Estantería en preparación</span></article>
+        <article class="shelf"><div class="emoji" aria-hidden="true">📚</div><h3>Lecturas y curiosidades</h3><p>Cuentitos, ideas, historias y pequeños descubrimientos que vale la pena guardar.</p><span class="soon">Estantería en preparación</span></article>
+        <article class="shelf"><div class="emoji" aria-hidden="true">🧰</div><h3>Recursos que ayudan</h3><p>Guías, plantillas y materiales sencillos para resolver algo o aprender algo nuevo.</p><span class="soon">Estantería en preparación</span></article>
+        <article class="shelf"><div class="emoji" aria-hidden="true">🌼</div><h3>Ideas para regalar</h3><p>Detalles descargables para compartir, acompañar y hacer más lindo el día.</p><span class="soon">Estantería en preparación</span></article>
+      </div>
+    </section>
+    <section class="honor wrap" aria-labelledby="colaborar">
+      <div style="font-size:36px" aria-hidden="true">🧡</div>
+      <h2 id="colaborar">Si te hizo bien, podés ayudar a que siga</h2>
+      <p>RUMA es de acceso libre. Si encontraste algo que te sirvió y querés colaborar para mantener y sumar nuevos recursos, podés hacerlo voluntariamente. Si hoy no podés, llevate lo que necesites con la misma alegría.</p>
+      <div class="alias">La colaboración se habilitará aquí</div>
+      <p class="small">Sin cuotas. Sin obligación. Sin pedir nada a cambio.</p>
+    </section>
   </main>
+  <footer class="wrap">RUMA · Un rinconcito donde las cosas buenas circulan.<br>Entrá, encontrá, descargá y compartí.</footer>
 </body>
 </html>
