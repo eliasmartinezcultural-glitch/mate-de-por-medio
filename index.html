@@ -1,66 +1,32 @@
 <!doctype html>
-<html lang="es-AR">
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f6f3eb">
-<meta name="description" content="Un pequeño rincón para hacer una pausa, leer algo breve y volver al día con un poco más de calma.">
-<title>Mate de por Medio — Un rincón sin apuro</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="app.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4eee2">
+  <title>Tomar mates con Elías</title>
+  <style>
+    :root{color-scheme:light;--paper:#f4eee2;--ink:#40382e;--muted:#766b5d;--leaf:#65745b;--line:#ded4c3}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+    main{width:min(100%,620px);text-align:center;padding:clamp(28px,7vw,64px) 20px}
+    .mate{font-size:54px;line-height:1;margin-bottom:28px}
+    .eyebrow{font:12px/1.5 system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--leaf)}
+    h1{font-size:clamp(36px,8vw,58px);font-weight:normal;line-height:1.06;margin:18px 0}
+    p{font-size:18px;line-height:1.7;color:var(--muted);max-width:430px;margin:0 auto}
+    .rule{width:56px;height:1px;background:var(--line);margin:30px auto}
+    footer{font:12px/1.6 system-ui,sans-serif;color:var(--muted);letter-spacing:.04em}
+  </style>
 </head>
 <body>
-<header class="topbar">
-  <a class="identity" href="#inicio" aria-label="Mate de por Medio, inicio"><span class="identity-mark" aria-hidden="true">m<span>.</span></span><span><strong>mate de por medio</strong><small>UN RINCÓN SIN APURO</small></span></a>
-  <nav aria-label="Navegación principal"><a href="#rincon">El rincón</a><a href="#regalitos">Regalitos</a><a class="nav-support" href="#colaborar">Una mano <span>↗</span></a></nav>
-</header>
-<main id="inicio">
-  <section class="hero wrap">
-    <div class="hero-copy">
-      <p class="kicker"><span></span> BAJAR UN CAMBIO TAMBIÉN ES AVANZAR</p>
-      <h1>Hay días para correr.<br>Y días para <em>cebar otro.</em></h1>
-      <p class="hero-description">Este es un rincón chiquito para hacer una pausa. Una historia breve, una curiosidad, una idea linda para llevarte. Sin apuro y sin tener que demostrar nada.</p>
-      <a class="primary-link" href="#rincon">Pasá, estás en tu casa <span>↓</span></a>
-      <p class="hand-note">El agua ya casi está…</p>
-    </div>
-    <div class="hero-art" role="img" aria-label="Ilustración cálida de una mesa junto a la ventana con un mate y una pava">
-      <div class="art-window"><span class="sun"></span><i class="window-cross vertical"></i><i class="window-cross horizontal"></i><div class="hill hill-back"></div><div class="hill hill-front"></div></div>
-      <div class="art-plant"><i></i><i></i><i></i><i></i><b></b></div>
-      <div class="art-table"></div>
-      <div class="art-kettle"><span></span><i></i><b></b></div>
-      <div class="art-mate"><span class="mate-leaf">✳</span><i></i><b></b></div>
-      <div class="art-paper"><span>un ratito</span><strong>para vos</strong><i>♡</i></div>
-      <div class="art-caption">CASA, CALMA Y UN MATECITO</div>
-    </div>
-  </section>
-  <section class="welcome wrap" aria-label="Bienvenida"><span class="welcome-flower">✳</span><div><p class="welcome-title">No hace falta llegar con una razón.</p><p>Podés mirar un minuto, quedarte un rato o volver otro día. Este lugar no te pide nada.</p></div><span class="welcome-scribble" aria-hidden="true">qué bueno<br>que viniste</span></section>
-  <section class="moments wrap" id="rincon">
-    <div class="section-heading"><div><p class="kicker">EL RINCÓN DE HOY</p><h2>Pequeñas cosas,<br><em>bien cerquita.</em></h2></div><p class="section-aside">Servite algo rico.<br>Lo demás puede esperar un poquito.</p></div>
-    <div class="moment-grid">
-      <article class="moment-card story-card"><div class="card-top"><span class="card-symbol">“</span><span class="card-type">UNA HISTORIA CORTITA</span></div><p class="eyebrow" id="story-category">PARA LEER DESPACITO</p><h3 id="story-title">El banco de la plaza</h3><div id="story-text" class="story-text"><p>Hay bancos que conocen más secretos que cualquier diario. Este guardaba el de un hombre que todos los jueves llevaba dos mandarinas.</p></div><button class="text-action" id="next-story" type="button">Otra historia <span>↗</span></button><span class="card-number">01 / LEER</span></article>
-      <article class="moment-card fact-card"><div class="card-top"><span class="card-symbol">✳</span><span class="card-type">UNA CURIOSIDAD</span></div><p class="eyebrow">¿SABÍAS QUE…?</p><h3>El mate también cuenta historias.</h3><p id="fact-text" class="moment-body">Compartir el mate es una forma cotidiana de decir “quedate un rato más”, incluso cuando nadie lo dice en voz alta.</p><button class="text-action" id="next-fact" type="button">Contame otra <span>↗</span></button><span class="card-number">02 / DESCUBRIR</span></article>
-      <article class="moment-card pause-card"><div class="card-top"><span class="card-symbol">☼</span><span class="card-type">UNA PAUSA</span></div><p class="eyebrow">UN CONSEJO SIN RECETA</p><h3 id="tip-title">Aflojá los hombros.</h3><p id="tip-text" class="moment-body">Soltá un poquito la mandíbula, apoyá bien los pies y respirà sin apurarte. No tenés que resolver todo en este instante.</p><button class="text-action" id="next-tip" type="button">Necesito otra pausa <span>↗</span></button><span class="card-number">03 / RESPIRAR</span></article>
-    </div>
-    <p class="little-footnote"><span>✳</span> No hay que terminar nada. Si algo te hizo bien, ya alcanzó.</p>
-  </section>
-  <section class="gifts" id="regalitos"><div class="wrap">
-    <div class="section-heading gift-heading"><div><p class="kicker">UN DETALLE PARA LLEVAR</p><h2>Te guardé <em>una cosita.</em></h2></div><p class="section-aside">Gratis, porque sí.<br>Como esos gestos que hacen bien.</p></div>
-    <div class="gift-grid">
-      <a class="gift-card" href="descargas/dibujo-matero.svg" download><span class="gift-art coloring-art"><span class="art-chip">PARA PINTAR</span><svg viewBox="0 0 180 150" aria-hidden="true"><path d="M51 57 Q42 88 60 111 Q83 128 109 110 Q125 89 115 57Z" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M53 59 Q85 48 114 59M65 76q8 8 16 0m8 0q8 8 16 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M106 65l28-31 9 8-28 31M139 35l5-5 9 9-5 5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M42 124q45 8 94 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M77 45q-9-17 7-25 13 15 2 26M95 43q-1-18 17-22 7 20-13 27" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="download-dot">↓</span></span><span class="gift-info"><small>01 · UN RATITO CREATIVO</small><strong>Un mate para pintar</strong><span>Imprimilo, sacá los lápices y hacelo a tu manera.</span><b>Descargar <i>↗</i></b></span></a>
-      <a class="gift-card" href="descargas/tarjetita-pausa.svg" download><span class="gift-art note-art"><span class="art-chip">PARA COMPARTIR</span><span class="mini-flower">✳</span><strong>Hoy también<br>merecés una pausa.</strong><small>mandáselo a alguien querido ♡</small><span class="download-dot">↓</span></span><span class="gift-info"><small>02 · UN MENSAJITO LINDO</small><strong>Una pausa en el bolsillo</strong><span>Una tarjetita para guardar o regalar.</span><b>Descargar <i>↗</i></b></span></a>
-      <a class="gift-card" href="descargas/fondo-matero.svg" download><span class="gift-art wallpaper-art"><span class="art-chip">PARA TU PANTALLA</span><span class="wall-sun"></span><span class="wall-mate">m</span><span class="wall-text">hacé lugar<br>para lo simple</span><span class="download-dot">↓</span></span><span class="gift-info"><small>03 · UN RECORDATORIO</small><strong>Fondo para el celu</strong><span>Un pequeño recordatorio de volver a vos.</span><b>Descargar <i>↗</i></b></span></a>
-    </div><p class="gift-note">Si un archivo no se abre automáticamente, tocá el enlace y guardalo desde el navegador.</p>
-  </div></section>
-  <section class="support-section wrap" id="colaborar">
-    <div class="support-illustration" aria-hidden="true"><div class="support-heart">♡</div><div class="jar"><span>gracias</span><b>♥</b><i></i></div><div class="support-leaf">✳</div></div>
-    <div class="support-copy"><p class="kicker">SI TE NACE, PODÉS</p><h2>Ayudar a que este rinconcito <em>siga abierto.</em></h2><p>Preparar y cuidar este espacio lleva tiempo. Si alguna vez te hizo compañía y querés dar una mano, podés hacerlo con una colaboración voluntaria.</p><p class="support-promise">No es una entrada. No es una obligación. No hay nada que tengas que devolver.</p><div class="alias-box"><div><small>ALIAS PARA COLABORAR</small><strong id="support-alias">ocarina.guitarra</strong></div><button id="copy-alias" type="button">Copiar alias <span>▢</span></button></div><p class="support-status" id="support-status-text" role="status">La colaboración es completamente opcional. Todo el contenido sigue siendo gratuito.</p><p class="support-disclaimer">La transferencia se realiza desde tu banco o billetera. Este sitio no recibe ni verifica pagos.</p></div>
-  </section>
-  <aside class="support-tab" aria-label="Colaboración voluntaria"><span class="support-tab-icon">♡</span><span><strong>Una mano</strong><small>Solo si te nace.</small></span><a href="#colaborar" aria-label="Ver cómo colaborar">↗</a></aside>
-  <section class="closing"><span class="closing-star">✳</span><p>Y bueno… el agua se enfría.</p><h2>Gracias por pasar.</h2><p class="closing-sub">Ojalá te lleves un poquito de calma.<br>La puerta queda abierta para la próxima.</p><a href="#inicio">Volver al principio ↑</a></section>
-</main>
-<footer class="footer"><a class="footer-brand" href="#inicio">mate de por medio<span>.</span></a><p>Hecho con cariño, de este lado del mapa.</p><span>UN RINCÓN SIN APURO · <span id="year"></span></span></footer>
+  <main>
+    <div class="mate" aria-hidden="true">🧉</div>
+    <div class="eyebrow">Un lugar sin apuro</div>
+    <h1>Tomar mates<br>con Elías</h1>
+    <div class="rule"></div>
+    <p>Estamos preparando este rinconcito desde cero. Pronto habrá una mesa, un mate y tiempo para quedarse un rato.</p>
+    <div class="rule"></div>
+    <footer>Sin apuro. Sin obligación. A tu tiempo.</footer>
+  </main>
 </body>
 </html>
